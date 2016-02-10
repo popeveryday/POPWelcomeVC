@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		10FA67D2709231B9D8915BB3 /* Pods_POPWelcomeVC_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8472C29964C4B171C8B13CA8 /* Pods_POPWelcomeVC_Example.framework */; };
+		4E45400C1C6B9F5000BD51E5 /* WelcomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E45400B1C6B9F5000BD51E5 /* WelcomeVC.m */; };
 		58D827F998808C9A459D2E8A /* Pods_POPWelcomeVC_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 688335C08BC451E7225DDB6F /* Pods_POPWelcomeVC_Tests.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4E45400A1C6B9F5000BD51E5 /* WelcomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeVC.h; sourceTree = "<group>"; };
+		4E45400B1C6B9F5000BD51E5 /* WelcomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeVC.m; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* POPWelcomeVC_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = POPWelcomeVC_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -137,6 +140,8 @@
 				6003F5A6195388D20070C39A /* POPViewController.m */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
+				4E45400A1C6B9F5000BD51E5 /* WelcomeVC.h */,
+				4E45400B1C6B9F5000BD51E5 /* WelcomeVC.m */,
 			);
 			name = "Example for POPWelcomeVC";
 			path = POPWelcomeVC;
@@ -393,6 +398,7 @@
 				6003F59E195388D20070C39A /* POPAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* POPViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				4E45400C1C6B9F5000BD51E5 /* WelcomeVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
