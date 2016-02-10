@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'POPWelcomeVC_Example', :exclusive => true do
+  pod 'POPWelcomeVC', :path => '../'
+end
+
+target 'POPWelcomeVC_Tests', :exclusive => true do
+  pod 'POPWelcomeVC', :path => '../'
+
+  
+end
