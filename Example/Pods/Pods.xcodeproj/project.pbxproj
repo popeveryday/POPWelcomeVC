@@ -1,1222 +1,3625 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		0F6FCF15CC1F4F05C46539443FDA2AAB /* MBProgressHUD-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5107024517FD47CD11481EF8550141CE /* MBProgressHUD-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		171129E8F57602B4CBCC2EA866C60F77 /* NetLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 746C3C16F7168EA5040470F2B038137A /* NetLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		17B80C7DBDE40F44D214529CF58038DC /* POPLib-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CAED3FC2AFC998F6749300D4CFDC792 /* POPLib-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1B53929EDEBBC5A8BA650D8F9BF044AA /* StringLib.h in Headers */ = {isa = PBXBuildFile; fileRef = EF3093F5FCEECD70247A1B334DD8FA54 /* StringLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1E7623B9420C3E71FAE3287C0CECA040 /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BEBE0D6CAD3EEE48BFA636EB15C8656 /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		20AC8683819688CFAB29B2B905786887 /* CommonLib.m in Sources */ = {isa = PBXBuildFile; fileRef = CDB48289F05941FA1406BF6A74ABA9DD /* CommonLib.m */; };
-		285782931C3D72AA7810C6D7CEA6423E /* ObserverObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 23ABEA91ED13B1A040782EB37B326003 /* ObserverObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		298DA5B8A6C99BD86D7018B0C29CF13B /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = B5868E2332FEEA725C824616DB6A2311 /* Reachability.m */; };
-		2F2446868DEA21BDD9D1AF2DFDBF95F8 /* Pods-POPWelcomeVC_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7FD76B710E487A7F1E81DCDEA6ABDD7F /* Pods-POPWelcomeVC_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		349182AA12227544D165A87B3CE7E316 /* InAppPurchaseLib.m in Sources */ = {isa = PBXBuildFile; fileRef = D75B369DA42FE99DFB1643AE20D61189 /* InAppPurchaseLib.m */; };
-		38ED8138A8B6753A0E7D7462E8B8DA77 /* InAppPurchaseLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C0C61208265C239CDCBC2F4C13CD572 /* InAppPurchaseLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		40C42F3F5DD94F29414FB7BF431221AC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53B5909140513900ECD9A4022F3EB6F9 /* CoreGraphics.framework */; };
-		4CE9C19317725398CC31B95B1FA17F87 /* ViewLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 278CEB7CCF2ECC258E1016A7205FA89C /* ViewLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4E37650A1CB2962A00F631C9 /* POPWelcomeVC.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E3765081CB2962A00F631C9 /* POPWelcomeVC.h */; };
-		4E37650B1CB2962A00F631C9 /* POPWelcomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3765091CB2962A00F631C9 /* POPWelcomeVC.m */; };
-		5B5756D41AFE311610F85969DBA46A0D /* NSDate+NVTimeAgo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2320700CA60032903BE5C2C92B5E510A /* NSDate+NVTimeAgo.m */; };
-		7207B86E26E32876D9CF148101BFEFB5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6650A4984A011C9DE95015D0541E0E28 /* Foundation.framework */; };
-		7223F2D78A55A3B6DF2F4C9373E140BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6650A4984A011C9DE95015D0541E0E28 /* Foundation.framework */; };
-		75514B71BC2CC5DFC7719A39C410E3A2 /* AppWelcomeVC.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E6F5533A129EE2FF8E691CA6C5B1338 /* AppWelcomeVC.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7D31C743E3AA8475776393967E2E2998 /* NetLib.m in Sources */ = {isa = PBXBuildFile; fileRef = D1522B520547542029957BEBF6804882 /* NetLib.m */; };
-		7D357CB24FDDB29D588F4D3332FCC586 /* POPWelcomeVC-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A43F0FDC936387E71B0BF62F282B431 /* POPWelcomeVC-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		827A553DFE2DC1B3CFD9B12E84A807E2 /* POPWelcomeVC-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3027D44CAF9997E78C2D8ADC0CB0E8EA /* POPWelcomeVC-dummy.m */; };
-		8AB047CB155C69A2195F62AA7F3F327E /* CoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D8FD4CB5ED8D9339DFCB2503C8FB56 /* CoreData.m */; };
-		933C5BDAE42B2F9D4575C435DF83DEED /* FileLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 76E60C917C9046D33FF40A963386F02F /* FileLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		95BD8D291D940174A5BD66E2AA574788 /* NSDate+NVTimeAgo.h in Headers */ = {isa = PBXBuildFile; fileRef = FB4445CA9CF5B52C0C27910AAF31DC59 /* NSDate+NVTimeAgo.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9ADF25AB118800F1BA971B9B38374C9C /* ALAssetsLibrary+CustomPhotoAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB60573D46A92FF58FC871E591DAE98 /* ALAssetsLibrary+CustomPhotoAlbum.m */; };
-		9CF761A90B48962239F3CCDE458F6661 /* POPLib.h in Headers */ = {isa = PBXBuildFile; fileRef = ABF81B742F74F034002A6C91A6F6C70D /* POPLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9E17CC11959A1FE5566CE528047ACDC0 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F26A344EAF8FDAFE24F048B5452D7F80 /* MBProgressHUD.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		9F0D01802FFAC84E9FC6123B873ADAD0 /* ImageLib.m in Sources */ = {isa = PBXBuildFile; fileRef = 762F7F72080F200C0A319B3C8BCE58A0 /* ImageLib.m */; };
-		A2838D033DD4F3494C6976FBDD92F169 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6650A4984A011C9DE95015D0541E0E28 /* Foundation.framework */; };
-		A4823EBBCB4FC7FA4C69370FCB894593 /* ReturnSet.h in Headers */ = {isa = PBXBuildFile; fileRef = F7ACADF4071D9C57F774D8D1D6555C60 /* ReturnSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A59140693411CA98476DD6CCF40F7681 /* GameCenterLib2.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F75E8BD19C72D13C4D3B770ADAF9658 /* GameCenterLib2.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A7ECCFA6D1BFDFD3EC4A93F615A2ABE7 /* ReturnSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 971AA221FDEB76DBC93B0B58D4B78A0D /* ReturnSet.m */; };
-		AA437635DA5555FAF44D9F28D6CA9D38 /* ImageLib.h in Headers */ = {isa = PBXBuildFile; fileRef = BE77735B1AA8ABAD506C015B0D55C372 /* ImageLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ABD96A4DD960FCFD167E63795DB9518B /* Pods-POPWelcomeVC_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 24AF08C510E113557C6DA1AE9A413118 /* Pods-POPWelcomeVC_Example-dummy.m */; };
-		B02977C10E6A1F100064B5F186BEA08B /* MBProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E0F8C2365EE7E5EFC253CC843002BE0 /* MBProgressHUD.framework */; };
-		B0351804F5299D39E85704769B2CC677 /* Pods-POPWelcomeVC_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B66DBD81F0D5914011509C714826BA29 /* Pods-POPWelcomeVC_Tests-dummy.m */; };
-		B2EAEB7A2BBEE89BFB3897201295234D /* Hashtable.m in Sources */ = {isa = PBXBuildFile; fileRef = BE204D8EC27AFBD4EE9F3D637E68DCBA /* Hashtable.m */; };
-		BB010EE04BA829E196554A00A951AA7C /* MBProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7A2C91243D36FC1D549D37A32A049E /* MBProgressHUD-dummy.m */; };
-		BD6AF3EB5BA58A0FDCDB306BFE8451A2 /* POPLib-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 16740DFC9767CEEE289DA3055AFF39F7 /* POPLib-dummy.m */; };
-		C27BAF0FA678F49225835B170D490882 /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B254CC000F8E741ED9E11A4B9CFFE42 /* Reachability.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C34E4CBF55F876572DCE355D6B93DA6B /* GameCenterLib2.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1CCEF889859FC42A155D7381D221D2 /* GameCenterLib2.m */; };
-		C41FBBBC850249D1273C833518EEA002 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6650A4984A011C9DE95015D0541E0E28 /* Foundation.framework */; };
-		C9CC3D4DE69CB347E400107455B91D4E /* ObserverObject.m in Sources */ = {isa = PBXBuildFile; fileRef = CA195168445B3CD539BC72910080DA24 /* ObserverObject.m */; };
-		CCC4B7231826A8FCD5C1D042C535A6CE /* Pods-POPWelcomeVC_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AC00013F3374E375E11BF0E04D66B09 /* Pods-POPWelcomeVC_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CE299C12FBF4FD42D40511499DBB5001 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6650A4984A011C9DE95015D0541E0E28 /* Foundation.framework */; };
-		CEFD44C75A33A60FFDE1DE47905587E1 /* DateObject.h in Headers */ = {isa = PBXBuildFile; fileRef = A8F469E73167DFA1B1C41E17E82FF513 /* DateObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D015B705DCB189EF608793A477700B7B /* DateObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DE86EFD146F4BFC60F132DB2C6DEC4 /* DateObject.m */; };
-		D5E03BDB7476CC44AAA0717CE9A028F7 /* GlobalConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = A99971F00FAB1E34431BF2DE2D7F7FCC /* GlobalConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D84DBC3B9456F1A679DC6A7124B6988F /* POPLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A3116F7100FDBD23C5BE5B5AEC02E3A /* POPLib.framework */; };
-		DB7DE63851EB9B7210FEF53F6400AC6E /* CoreData.h in Headers */ = {isa = PBXBuildFile; fileRef = 479CD26941F6D0121061DAE1DB76BDF8 /* CoreData.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DDCE427FDC25E94B1191247061E31B6E /* FileLib.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B252ADF77CE9BECE4F1B7DEBA7ED1CE /* FileLib.m */; };
-		DEB7F287E5ADB45978814DF02CF2F185 /* StringLib.m in Sources */ = {isa = PBXBuildFile; fileRef = 30BDE99FC49EF0607E2295C40DD3F14B /* StringLib.m */; };
-		E0AE5ED0FB23472CF9A7FC914561D2DB /* DateLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DC711CF50FA99DC345CAF33E49C96DB /* DateLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E2A8853DAA9E10BB48910D57863969E6 /* ALAssetsLibrary+CustomPhotoAlbum.h in Headers */ = {isa = PBXBuildFile; fileRef = 06859BA7C8BD9187660218A2A4AEDFEC /* ALAssetsLibrary+CustomPhotoAlbum.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E2AB44C20EFA3BFD162942F8FA5F7EFF /* CommonLib.h in Headers */ = {isa = PBXBuildFile; fileRef = A6FF9BE7209576221373C78B01B8FBFA /* CommonLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EE1774F18178887AE19B474B22F9846C /* Hashtable.h in Headers */ = {isa = PBXBuildFile; fileRef = 87AAEE69FDA5F178AA5013845AC55CB8 /* Hashtable.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F849F98ECA9EC380BBB87FA1760F4E2B /* ViewLib.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D9269B769CF92EC4831B7980E4C9FC /* ViewLib.m */; };
-		FA6DDD6B64825CC9F18986E3D9A1CBC8 /* DateLib.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B25D90160C85B2F03011D4AABEE15D /* DateLib.m */; };
-		FD00801B3DEFF9BADE08B429805FF86B /* AppWelcomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F88AC15BACD4171C0688C0133DD5B4 /* AppWelcomeVC.m */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		01F8814AD1DF4B0DF3187C1A34E0477D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5C8A3E79509555DDF69EEFE5D1887ADE;
-			remoteInfo = POPWelcomeVC;
-		};
-		0592127AF78EE65EE6D4442668C1115B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5C8A3E79509555DDF69EEFE5D1887ADE;
-			remoteInfo = POPWelcomeVC;
-		};
-		11DFB181D1777767827C2E8940C6C251 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 61A75130DD53BECD3A45F5448758D2DA;
-			remoteInfo = POPLib;
-		};
-		273958E79C4729A8BD98B2C0E94283B1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 61A75130DD53BECD3A45F5448758D2DA;
-			remoteInfo = POPLib;
-		};
-		57472AD26A9DB7751F49108CEBE2E576 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E61CE3B6DFA1FE6B3E296965C76C0E10;
-			remoteInfo = MBProgressHUD;
-		};
-		8FA1CBF061138309C66E2F8658FFFE29 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E61CE3B6DFA1FE6B3E296965C76C0E10;
-			remoteInfo = MBProgressHUD;
-		};
-		AA2BB2139D87629B9BA50C30BA192BF9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 61A75130DD53BECD3A45F5448758D2DA;
-			remoteInfo = POPLib;
-		};
-		D7A7E12A2E2F3C4A7B69CA239CB4FCDE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E61CE3B6DFA1FE6B3E296965C76C0E10;
-			remoteInfo = MBProgressHUD;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		06859BA7C8BD9187660218A2A4AEDFEC /* ALAssetsLibrary+CustomPhotoAlbum.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ALAssetsLibrary+CustomPhotoAlbum.h"; path = "Pod/Classes/Extend/ALAssetsLibrary+CustomPhotoAlbum.h"; sourceTree = "<group>"; };
-		16740DFC9767CEEE289DA3055AFF39F7 /* POPLib-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "POPLib-dummy.m"; sourceTree = "<group>"; };
-		1A3116F7100FDBD23C5BE5B5AEC02E3A /* POPLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = POPLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1B254CC000F8E741ED9E11A4B9CFFE42 /* Reachability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = Pod/Classes/Custom/Reachability.h; sourceTree = "<group>"; };
-		1DC711CF50FA99DC345CAF33E49C96DB /* DateLib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DateLib.h; path = Pod/Classes/Common/DateLib.h; sourceTree = "<group>"; };
-		1E0F8C2365EE7E5EFC253CC843002BE0 /* MBProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MBProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2102871F6865EDFABA25AC3E16952247 /* Pods-POPWelcomeVC_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-POPWelcomeVC_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		2320700CA60032903BE5C2C92B5E510A /* NSDate+NVTimeAgo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDate+NVTimeAgo.m"; path = "Pod/Classes/Extend/NSDate+NVTimeAgo.m"; sourceTree = "<group>"; };
-		23ABEA91ED13B1A040782EB37B326003 /* ObserverObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ObserverObject.h; path = Pod/Classes/Custom/ObserverObject.h; sourceTree = "<group>"; };
-		24AF08C510E113557C6DA1AE9A413118 /* Pods-POPWelcomeVC_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-POPWelcomeVC_Example-dummy.m"; sourceTree = "<group>"; };
-		24DE86EFD146F4BFC60F132DB2C6DEC4 /* DateObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DateObject.m; path = Pod/Classes/Custom/DateObject.m; sourceTree = "<group>"; };
-		25F88414C1814818FD39DEEE615B4850 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		278CEB7CCF2ECC258E1016A7205FA89C /* ViewLib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ViewLib.h; path = Pod/Classes/Common/ViewLib.h; sourceTree = "<group>"; };
-		2CAED3FC2AFC998F6749300D4CFDC792 /* POPLib-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "POPLib-umbrella.h"; sourceTree = "<group>"; };
-		3027D44CAF9997E78C2D8ADC0CB0E8EA /* POPWelcomeVC-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "POPWelcomeVC-dummy.m"; sourceTree = "<group>"; };
-		30BDE99FC49EF0607E2295C40DD3F14B /* StringLib.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = StringLib.m; path = Pod/Classes/Common/StringLib.m; sourceTree = "<group>"; };
-		3DB6583021B7AB827FA7D05F1D2ACC59 /* Pods-POPWelcomeVC_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-POPWelcomeVC_Example-resources.sh"; sourceTree = "<group>"; };
-		3F1CCEF889859FC42A155D7381D221D2 /* GameCenterLib2.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GameCenterLib2.m; path = Pod/Classes/Common/GameCenterLib2.m; sourceTree = "<group>"; };
-		479CD26941F6D0121061DAE1DB76BDF8 /* CoreData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CoreData.h; path = Pod/Classes/Common/CoreData.h; sourceTree = "<group>"; };
-		4A9E7545E4E7B09C17B06D9DFDD3483F /* POPWelcomeVC.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = POPWelcomeVC.xcconfig; sourceTree = "<group>"; };
-		4BEBE0D6CAD3EEE48BFA636EB15C8656 /* MBProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
-		4E3765081CB2962A00F631C9 /* POPWelcomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPWelcomeVC.h; sourceTree = "<group>"; };
-		4E3765091CB2962A00F631C9 /* POPWelcomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POPWelcomeVC.m; sourceTree = "<group>"; };
-		4E6F5533A129EE2FF8E691CA6C5B1338 /* AppWelcomeVC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AppWelcomeVC.h; sourceTree = "<group>"; };
-		4EB236D4EE921A410C2F41EA4F823267 /* Pods_POPWelcomeVC_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_POPWelcomeVC_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5107024517FD47CD11481EF8550141CE /* MBProgressHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-umbrella.h"; sourceTree = "<group>"; };
-		53B5909140513900ECD9A4022F3EB6F9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		56AB86523A593FF79413539A5F067F02 /* POPWelcomeVC.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = POPWelcomeVC.modulemap; sourceTree = "<group>"; };
-		5AC00013F3374E375E11BF0E04D66B09 /* Pods-POPWelcomeVC_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-POPWelcomeVC_Tests-umbrella.h"; sourceTree = "<group>"; };
-		5C0C61208265C239CDCBC2F4C13CD572 /* InAppPurchaseLib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = InAppPurchaseLib.h; path = Pod/Classes/Common/InAppPurchaseLib.h; sourceTree = "<group>"; };
-		60AE131ED9038D7B37D24B9181D53E43 /* POPWelcomeVC-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "POPWelcomeVC-prefix.pch"; sourceTree = "<group>"; };
-		63F88AC15BACD4171C0688C0133DD5B4 /* AppWelcomeVC.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AppWelcomeVC.m; sourceTree = "<group>"; };
-		6650A4984A011C9DE95015D0541E0E28 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		6A43F0FDC936387E71B0BF62F282B431 /* POPWelcomeVC-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "POPWelcomeVC-umbrella.h"; sourceTree = "<group>"; };
-		6AF986D4E832991EF88AC0641633D6EA /* POPLib.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = POPLib.xcconfig; sourceTree = "<group>"; };
-		6F75E8BD19C72D13C4D3B770ADAF9658 /* GameCenterLib2.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GameCenterLib2.h; path = Pod/Classes/Common/GameCenterLib2.h; sourceTree = "<group>"; };
-		746C3C16F7168EA5040470F2B038137A /* NetLib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NetLib.h; path = Pod/Classes/Common/NetLib.h; sourceTree = "<group>"; };
-		7602A6C3530F95EAD567F8CEF328A607 /* Pods-POPWelcomeVC_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-POPWelcomeVC_Tests-resources.sh"; sourceTree = "<group>"; };
-		762F7F72080F200C0A319B3C8BCE58A0 /* ImageLib.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ImageLib.m; path = Pod/Classes/Common/ImageLib.m; sourceTree = "<group>"; };
-		76E60C917C9046D33FF40A963386F02F /* FileLib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FileLib.h; path = Pod/Classes/Common/FileLib.h; sourceTree = "<group>"; };
-		77BBBDF50CD9857BA698749A26BAB440 /* POPLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = POPLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		78CA5B3D17BD03AA4BCAF1DA1DA3EC60 /* Pods_POPWelcomeVC_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_POPWelcomeVC_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7FD76B710E487A7F1E81DCDEA6ABDD7F /* Pods-POPWelcomeVC_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-POPWelcomeVC_Example-umbrella.h"; sourceTree = "<group>"; };
-		81D8FD4CB5ED8D9339DFCB2503C8FB56 /* CoreData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CoreData.m; path = Pod/Classes/Common/CoreData.m; sourceTree = "<group>"; };
-		82ACEED7449C23150AB7C8BBC59FD2D0 /* Pods-POPWelcomeVC_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-POPWelcomeVC_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		849CAD02DDC7E81A4A5CBC23281B5081 /* Pods-POPWelcomeVC_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-POPWelcomeVC_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		84D9269B769CF92EC4831B7980E4C9FC /* ViewLib.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ViewLib.m; path = Pod/Classes/Common/ViewLib.m; sourceTree = "<group>"; };
-		87AAEE69FDA5F178AA5013845AC55CB8 /* Hashtable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Hashtable.h; path = Pod/Classes/Custom/Hashtable.h; sourceTree = "<group>"; };
-		8AB60573D46A92FF58FC871E591DAE98 /* ALAssetsLibrary+CustomPhotoAlbum.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ALAssetsLibrary+CustomPhotoAlbum.m"; path = "Pod/Classes/Extend/ALAssetsLibrary+CustomPhotoAlbum.m"; sourceTree = "<group>"; };
-		8B252ADF77CE9BECE4F1B7DEBA7ED1CE /* FileLib.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FileLib.m; path = Pod/Classes/Common/FileLib.m; sourceTree = "<group>"; };
-		8BC237518E2DD1890A96344AFDDAE68D /* POPLib.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = POPLib.modulemap; sourceTree = "<group>"; };
-		8C2DCA0C48B078F9AC18A7A068BC141B /* MBProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-prefix.pch"; sourceTree = "<group>"; };
-		8D375CA5478F1DC55F5C4C6D358CAA59 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		90F9D41D1644E04EEA4D0E1486F763C4 /* Pods-POPWelcomeVC_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-POPWelcomeVC_Tests.modulemap"; sourceTree = "<group>"; };
-		921EE35FFB62722A4510B904880ED310 /* Pods-POPWelcomeVC_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-POPWelcomeVC_Example.release.xcconfig"; sourceTree = "<group>"; };
-		971AA221FDEB76DBC93B0B58D4B78A0D /* ReturnSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ReturnSet.m; path = Pod/Classes/Custom/ReturnSet.m; sourceTree = "<group>"; };
-		9A7A2C91243D36FC1D549D37A32A049E /* MBProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD-dummy.m"; sourceTree = "<group>"; };
-		A6FF9BE7209576221373C78B01B8FBFA /* CommonLib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CommonLib.h; path = Pod/Classes/Common/CommonLib.h; sourceTree = "<group>"; };
-		A8F469E73167DFA1B1C41E17E82FF513 /* DateObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DateObject.h; path = Pod/Classes/Custom/DateObject.h; sourceTree = "<group>"; };
-		A99971F00FAB1E34431BF2DE2D7F7FCC /* GlobalConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GlobalConfig.h; path = Pod/Classes/GlobalConfig.h; sourceTree = "<group>"; };
-		ABF81B742F74F034002A6C91A6F6C70D /* POPLib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPLib.h; path = Pod/Classes/POPLib.h; sourceTree = "<group>"; };
-		B09F4D322731C6290E7647831C6019D8 /* MBProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MBProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B5868E2332FEEA725C824616DB6A2311 /* Reachability.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = Pod/Classes/Custom/Reachability.m; sourceTree = "<group>"; };
-		B5CFCBC3CCC80D4B780C762C8EC75EB7 /* POPLib-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "POPLib-prefix.pch"; sourceTree = "<group>"; };
-		B66DBD81F0D5914011509C714826BA29 /* Pods-POPWelcomeVC_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-POPWelcomeVC_Tests-dummy.m"; sourceTree = "<group>"; };
-		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BE204D8EC27AFBD4EE9F3D637E68DCBA /* Hashtable.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Hashtable.m; path = Pod/Classes/Custom/Hashtable.m; sourceTree = "<group>"; };
-		BE77735B1AA8ABAD506C015B0D55C372 /* ImageLib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ImageLib.h; path = Pod/Classes/Common/ImageLib.h; sourceTree = "<group>"; };
-		C54A55052B5615532CADE69F953B1B03 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CA195168445B3CD539BC72910080DA24 /* ObserverObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ObserverObject.m; path = Pod/Classes/Custom/ObserverObject.m; sourceTree = "<group>"; };
-		CB9BFFA1FB26D87B51FA134A12002125 /* Pods-POPWelcomeVC_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-POPWelcomeVC_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		CDB48289F05941FA1406BF6A74ABA9DD /* CommonLib.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CommonLib.m; path = Pod/Classes/Common/CommonLib.m; sourceTree = "<group>"; };
-		D1522B520547542029957BEBF6804882 /* NetLib.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NetLib.m; path = Pod/Classes/Common/NetLib.m; sourceTree = "<group>"; };
-		D2A58CC373FB52D952EC32196AB43F6C /* MBProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MBProgressHUD.modulemap; sourceTree = "<group>"; };
-		D304F5770F456D5FD6FD977E39D3FFE1 /* Pods-POPWelcomeVC_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-POPWelcomeVC_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		D75B369DA42FE99DFB1643AE20D61189 /* InAppPurchaseLib.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = InAppPurchaseLib.m; path = Pod/Classes/Common/InAppPurchaseLib.m; sourceTree = "<group>"; };
-		D9B25D90160C85B2F03011D4AABEE15D /* DateLib.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DateLib.m; path = Pod/Classes/Common/DateLib.m; sourceTree = "<group>"; };
-		DBB0899F58ADB949B6B240072A6B5B6E /* Pods-POPWelcomeVC_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-POPWelcomeVC_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		DBC4FE80591F3DE93211ECB35E257F21 /* Pods-POPWelcomeVC_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-POPWelcomeVC_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		DD3B196FEE9EEB227D29027BC6F0C8F2 /* Pods-POPWelcomeVC_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-POPWelcomeVC_Example.modulemap"; sourceTree = "<group>"; };
-		E316FE157DAB39758F71B88BEC663745 /* Pods-POPWelcomeVC_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-POPWelcomeVC_Example-frameworks.sh"; sourceTree = "<group>"; };
-		E8E3A5E808D598D28CB4BF533A108E55 /* Pods-POPWelcomeVC_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-POPWelcomeVC_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		EF3093F5FCEECD70247A1B334DD8FA54 /* StringLib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = StringLib.h; path = Pod/Classes/Common/StringLib.h; sourceTree = "<group>"; };
-		EFC335FBCA2FEE88ADE0687881286392 /* MBProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBProgressHUD.xcconfig; sourceTree = "<group>"; };
-		F26A344EAF8FDAFE24F048B5452D7F80 /* MBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		F6B4C8302DC146FD16CB2C6205AD1EBF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F7ACADF4071D9C57F774D8D1D6555C60 /* ReturnSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ReturnSet.h; path = Pod/Classes/Custom/ReturnSet.h; sourceTree = "<group>"; };
-		FB4445CA9CF5B52C0C27910AAF31DC59 /* NSDate+NVTimeAgo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDate+NVTimeAgo.h"; path = "Pod/Classes/Extend/NSDate+NVTimeAgo.h"; sourceTree = "<group>"; };
-		FD3DAD8C247D0ACDE7003064F0214691 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FE2F3BA16C8FCDC567B7B60645212CBC /* POPWelcomeVC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = POPWelcomeVC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		030963C31495C1A404EA8973A4D67023 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7207B86E26E32876D9CF148101BFEFB5 /* Foundation.framework in Frameworks */,
-				B02977C10E6A1F100064B5F186BEA08B /* MBProgressHUD.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0650ADF953653F0612CD0DA1F5679D9A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A2838D033DD4F3494C6976FBDD92F169 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		296647DDD3E44D2E11307F7AA5E65380 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CE299C12FBF4FD42D40511499DBB5001 /* Foundation.framework in Frameworks */,
-				D84DBC3B9456F1A679DC6A7124B6988F /* POPLib.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6488DB2C9BB99C53077D390CE673DD56 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				40C42F3F5DD94F29414FB7BF431221AC /* CoreGraphics.framework in Frameworks */,
-				7223F2D78A55A3B6DF2F4C9373E140BC /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CEB63DE65C55F97A5F9A4BF0EA0DFB81 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C41FBBBC850249D1273C833518EEA002 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		2EF53A5FDC0D8C1B9E071F9980B71953 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				A806EF333E4C12B93F64E8578AEE9487 /* POPWelcomeVC */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		3180D414B0C7653FF55B962DB4FE99BF /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				4E6F5533A129EE2FF8E691CA6C5B1338 /* AppWelcomeVC.h */,
-				63F88AC15BACD4171C0688C0133DD5B4 /* AppWelcomeVC.m */,
-				4E3765081CB2962A00F631C9 /* POPWelcomeVC.h */,
-				4E3765091CB2962A00F631C9 /* POPWelcomeVC.m */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		325477523DE6D7DD4D5505017DF3381A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				B09F4D322731C6290E7647831C6019D8 /* MBProgressHUD.framework */,
-				4EB236D4EE921A410C2F41EA4F823267 /* Pods_POPWelcomeVC_Example.framework */,
-				78CA5B3D17BD03AA4BCAF1DA1DA3EC60 /* Pods_POPWelcomeVC_Tests.framework */,
-				77BBBDF50CD9857BA698749A26BAB440 /* POPLib.framework */,
-				FE2F3BA16C8FCDC567B7B60645212CBC /* POPWelcomeVC.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		37F510F8566DAADC50E29EE126C2BE3A /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				53B5909140513900ECD9A4022F3EB6F9 /* CoreGraphics.framework */,
-				6650A4984A011C9DE95015D0541E0E28 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		45B3683A512EB87877AF07518C5040E5 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				864FFD34AFA846FBCC8C9320ECA7DE9E /* Pods-POPWelcomeVC_Example */,
-				539681EE87EE9C321DE3FF20CDE6F202 /* Pods-POPWelcomeVC_Tests */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		539681EE87EE9C321DE3FF20CDE6F202 /* Pods-POPWelcomeVC_Tests */ = {
-			isa = PBXGroup;
-			children = (
-				8D375CA5478F1DC55F5C4C6D358CAA59 /* Info.plist */,
-				90F9D41D1644E04EEA4D0E1486F763C4 /* Pods-POPWelcomeVC_Tests.modulemap */,
-				D304F5770F456D5FD6FD977E39D3FFE1 /* Pods-POPWelcomeVC_Tests-acknowledgements.markdown */,
-				2102871F6865EDFABA25AC3E16952247 /* Pods-POPWelcomeVC_Tests-acknowledgements.plist */,
-				B66DBD81F0D5914011509C714826BA29 /* Pods-POPWelcomeVC_Tests-dummy.m */,
-				849CAD02DDC7E81A4A5CBC23281B5081 /* Pods-POPWelcomeVC_Tests-frameworks.sh */,
-				7602A6C3530F95EAD567F8CEF328A607 /* Pods-POPWelcomeVC_Tests-resources.sh */,
-				5AC00013F3374E375E11BF0E04D66B09 /* Pods-POPWelcomeVC_Tests-umbrella.h */,
-				DBC4FE80591F3DE93211ECB35E257F21 /* Pods-POPWelcomeVC_Tests.debug.xcconfig */,
-				E8E3A5E808D598D28CB4BF533A108E55 /* Pods-POPWelcomeVC_Tests.release.xcconfig */,
-			);
-			name = "Pods-POPWelcomeVC_Tests";
-			path = "Target Support Files/Pods-POPWelcomeVC_Tests";
-			sourceTree = "<group>";
-		};
-		609DD25AD2E438EC5F5211B36E1383C5 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				F6B4C8302DC146FD16CB2C6205AD1EBF /* Info.plist */,
-				D2A58CC373FB52D952EC32196AB43F6C /* MBProgressHUD.modulemap */,
-				EFC335FBCA2FEE88ADE0687881286392 /* MBProgressHUD.xcconfig */,
-				9A7A2C91243D36FC1D549D37A32A049E /* MBProgressHUD-dummy.m */,
-				8C2DCA0C48B078F9AC18A7A068BC141B /* MBProgressHUD-prefix.pch */,
-				5107024517FD47CD11481EF8550141CE /* MBProgressHUD-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/MBProgressHUD";
-			sourceTree = "<group>";
-		};
-		785E69B984DC53B9AD582CB6A6306225 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				25F88414C1814818FD39DEEE615B4850 /* Info.plist */,
-				56AB86523A593FF79413539A5F067F02 /* POPWelcomeVC.modulemap */,
-				4A9E7545E4E7B09C17B06D9DFDD3483F /* POPWelcomeVC.xcconfig */,
-				3027D44CAF9997E78C2D8ADC0CB0E8EA /* POPWelcomeVC-dummy.m */,
-				60AE131ED9038D7B37D24B9181D53E43 /* POPWelcomeVC-prefix.pch */,
-				6A43F0FDC936387E71B0BF62F282B431 /* POPWelcomeVC-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/POPWelcomeVC";
-			sourceTree = "<group>";
-		};
-		7DB346D0F39D3F0E887471402A8071AB = {
-			isa = PBXGroup;
-			children = (
-				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
-				2EF53A5FDC0D8C1B9E071F9980B71953 /* Development Pods */,
-				FADB4151220C2F105B54E1B6A7107E1A /* Frameworks */,
-				831EB5C3051F95423A3082ABD727F0AB /* Pods */,
-				325477523DE6D7DD4D5505017DF3381A /* Products */,
-				45B3683A512EB87877AF07518C5040E5 /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		831EB5C3051F95423A3082ABD727F0AB /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				F01B0EE0A48FA979CBEDD95ABC108E7F /* MBProgressHUD */,
-				FE0FC58D434B8A6127F1E52B388024D7 /* POPLib */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		864FFD34AFA846FBCC8C9320ECA7DE9E /* Pods-POPWelcomeVC_Example */ = {
-			isa = PBXGroup;
-			children = (
-				FD3DAD8C247D0ACDE7003064F0214691 /* Info.plist */,
-				DD3B196FEE9EEB227D29027BC6F0C8F2 /* Pods-POPWelcomeVC_Example.modulemap */,
-				CB9BFFA1FB26D87B51FA134A12002125 /* Pods-POPWelcomeVC_Example-acknowledgements.markdown */,
-				82ACEED7449C23150AB7C8BBC59FD2D0 /* Pods-POPWelcomeVC_Example-acknowledgements.plist */,
-				24AF08C510E113557C6DA1AE9A413118 /* Pods-POPWelcomeVC_Example-dummy.m */,
-				E316FE157DAB39758F71B88BEC663745 /* Pods-POPWelcomeVC_Example-frameworks.sh */,
-				3DB6583021B7AB827FA7D05F1D2ACC59 /* Pods-POPWelcomeVC_Example-resources.sh */,
-				7FD76B710E487A7F1E81DCDEA6ABDD7F /* Pods-POPWelcomeVC_Example-umbrella.h */,
-				DBB0899F58ADB949B6B240072A6B5B6E /* Pods-POPWelcomeVC_Example.debug.xcconfig */,
-				921EE35FFB62722A4510B904880ED310 /* Pods-POPWelcomeVC_Example.release.xcconfig */,
-			);
-			name = "Pods-POPWelcomeVC_Example";
-			path = "Target Support Files/Pods-POPWelcomeVC_Example";
-			sourceTree = "<group>";
-		};
-		A806EF333E4C12B93F64E8578AEE9487 /* POPWelcomeVC */ = {
-			isa = PBXGroup;
-			children = (
-				C8FC700B115EAFF511F4C967179A0068 /* Pod */,
-				785E69B984DC53B9AD582CB6A6306225 /* Support Files */,
-			);
-			name = POPWelcomeVC;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		C8FC700B115EAFF511F4C967179A0068 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				3180D414B0C7653FF55B962DB4FE99BF /* Classes */,
-			);
-			path = Pod;
-			sourceTree = "<group>";
-		};
-		F01B0EE0A48FA979CBEDD95ABC108E7F /* MBProgressHUD */ = {
-			isa = PBXGroup;
-			children = (
-				4BEBE0D6CAD3EEE48BFA636EB15C8656 /* MBProgressHUD.h */,
-				F26A344EAF8FDAFE24F048B5452D7F80 /* MBProgressHUD.m */,
-				609DD25AD2E438EC5F5211B36E1383C5 /* Support Files */,
-			);
-			path = MBProgressHUD;
-			sourceTree = "<group>";
-		};
-		FADB4151220C2F105B54E1B6A7107E1A /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				1E0F8C2365EE7E5EFC253CC843002BE0 /* MBProgressHUD.framework */,
-				1A3116F7100FDBD23C5BE5B5AEC02E3A /* POPLib.framework */,
-				37F510F8566DAADC50E29EE126C2BE3A /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		FB2020A9A671513926126A64AD948A2F /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				C54A55052B5615532CADE69F953B1B03 /* Info.plist */,
-				8BC237518E2DD1890A96344AFDDAE68D /* POPLib.modulemap */,
-				6AF986D4E832991EF88AC0641633D6EA /* POPLib.xcconfig */,
-				16740DFC9767CEEE289DA3055AFF39F7 /* POPLib-dummy.m */,
-				B5CFCBC3CCC80D4B780C762C8EC75EB7 /* POPLib-prefix.pch */,
-				2CAED3FC2AFC998F6749300D4CFDC792 /* POPLib-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/POPLib";
-			sourceTree = "<group>";
-		};
-		FE0FC58D434B8A6127F1E52B388024D7 /* POPLib */ = {
-			isa = PBXGroup;
-			children = (
-				06859BA7C8BD9187660218A2A4AEDFEC /* ALAssetsLibrary+CustomPhotoAlbum.h */,
-				8AB60573D46A92FF58FC871E591DAE98 /* ALAssetsLibrary+CustomPhotoAlbum.m */,
-				A6FF9BE7209576221373C78B01B8FBFA /* CommonLib.h */,
-				CDB48289F05941FA1406BF6A74ABA9DD /* CommonLib.m */,
-				479CD26941F6D0121061DAE1DB76BDF8 /* CoreData.h */,
-				81D8FD4CB5ED8D9339DFCB2503C8FB56 /* CoreData.m */,
-				1DC711CF50FA99DC345CAF33E49C96DB /* DateLib.h */,
-				D9B25D90160C85B2F03011D4AABEE15D /* DateLib.m */,
-				A8F469E73167DFA1B1C41E17E82FF513 /* DateObject.h */,
-				24DE86EFD146F4BFC60F132DB2C6DEC4 /* DateObject.m */,
-				76E60C917C9046D33FF40A963386F02F /* FileLib.h */,
-				8B252ADF77CE9BECE4F1B7DEBA7ED1CE /* FileLib.m */,
-				6F75E8BD19C72D13C4D3B770ADAF9658 /* GameCenterLib2.h */,
-				3F1CCEF889859FC42A155D7381D221D2 /* GameCenterLib2.m */,
-				A99971F00FAB1E34431BF2DE2D7F7FCC /* GlobalConfig.h */,
-				87AAEE69FDA5F178AA5013845AC55CB8 /* Hashtable.h */,
-				BE204D8EC27AFBD4EE9F3D637E68DCBA /* Hashtable.m */,
-				BE77735B1AA8ABAD506C015B0D55C372 /* ImageLib.h */,
-				762F7F72080F200C0A319B3C8BCE58A0 /* ImageLib.m */,
-				5C0C61208265C239CDCBC2F4C13CD572 /* InAppPurchaseLib.h */,
-				D75B369DA42FE99DFB1643AE20D61189 /* InAppPurchaseLib.m */,
-				746C3C16F7168EA5040470F2B038137A /* NetLib.h */,
-				D1522B520547542029957BEBF6804882 /* NetLib.m */,
-				FB4445CA9CF5B52C0C27910AAF31DC59 /* NSDate+NVTimeAgo.h */,
-				2320700CA60032903BE5C2C92B5E510A /* NSDate+NVTimeAgo.m */,
-				23ABEA91ED13B1A040782EB37B326003 /* ObserverObject.h */,
-				CA195168445B3CD539BC72910080DA24 /* ObserverObject.m */,
-				ABF81B742F74F034002A6C91A6F6C70D /* POPLib.h */,
-				1B254CC000F8E741ED9E11A4B9CFFE42 /* Reachability.h */,
-				B5868E2332FEEA725C824616DB6A2311 /* Reachability.m */,
-				F7ACADF4071D9C57F774D8D1D6555C60 /* ReturnSet.h */,
-				971AA221FDEB76DBC93B0B58D4B78A0D /* ReturnSet.m */,
-				EF3093F5FCEECD70247A1B334DD8FA54 /* StringLib.h */,
-				30BDE99FC49EF0607E2295C40DD3F14B /* StringLib.m */,
-				278CEB7CCF2ECC258E1016A7205FA89C /* ViewLib.h */,
-				84D9269B769CF92EC4831B7980E4C9FC /* ViewLib.m */,
-				FB2020A9A671513926126A64AD948A2F /* Support Files */,
-			);
-			path = POPLib;
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXHeadersBuildPhase section */
-		31F4A866121B6F4309D88BBCACC9F944 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E2A8853DAA9E10BB48910D57863969E6 /* ALAssetsLibrary+CustomPhotoAlbum.h in Headers */,
-				E2AB44C20EFA3BFD162942F8FA5F7EFF /* CommonLib.h in Headers */,
-				DB7DE63851EB9B7210FEF53F6400AC6E /* CoreData.h in Headers */,
-				E0AE5ED0FB23472CF9A7FC914561D2DB /* DateLib.h in Headers */,
-				CEFD44C75A33A60FFDE1DE47905587E1 /* DateObject.h in Headers */,
-				933C5BDAE42B2F9D4575C435DF83DEED /* FileLib.h in Headers */,
-				A59140693411CA98476DD6CCF40F7681 /* GameCenterLib2.h in Headers */,
-				D5E03BDB7476CC44AAA0717CE9A028F7 /* GlobalConfig.h in Headers */,
-				EE1774F18178887AE19B474B22F9846C /* Hashtable.h in Headers */,
-				AA437635DA5555FAF44D9F28D6CA9D38 /* ImageLib.h in Headers */,
-				38ED8138A8B6753A0E7D7462E8B8DA77 /* InAppPurchaseLib.h in Headers */,
-				171129E8F57602B4CBCC2EA866C60F77 /* NetLib.h in Headers */,
-				95BD8D291D940174A5BD66E2AA574788 /* NSDate+NVTimeAgo.h in Headers */,
-				285782931C3D72AA7810C6D7CEA6423E /* ObserverObject.h in Headers */,
-				17B80C7DBDE40F44D214529CF58038DC /* POPLib-umbrella.h in Headers */,
-				9CF761A90B48962239F3CCDE458F6661 /* POPLib.h in Headers */,
-				C27BAF0FA678F49225835B170D490882 /* Reachability.h in Headers */,
-				A4823EBBCB4FC7FA4C69370FCB894593 /* ReturnSet.h in Headers */,
-				1B53929EDEBBC5A8BA650D8F9BF044AA /* StringLib.h in Headers */,
-				4CE9C19317725398CC31B95B1FA17F87 /* ViewLib.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		86506D00D7FB1446AA32C32CCC0B7A17 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				75514B71BC2CC5DFC7719A39C410E3A2 /* AppWelcomeVC.h in Headers */,
-				7D357CB24FDDB29D588F4D3332FCC586 /* POPWelcomeVC-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9ECCB5570B7FBF8D348655FFA0FE9C90 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0F6FCF15CC1F4F05C46539443FDA2AAB /* MBProgressHUD-umbrella.h in Headers */,
-				4E37650A1CB2962A00F631C9 /* POPWelcomeVC.h in Headers */,
-				1E7623B9420C3E71FAE3287C0CECA040 /* MBProgressHUD.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A6DD539BE46B157014DCAC393ADDCA6A /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CCC4B7231826A8FCD5C1D042C535A6CE /* Pods-POPWelcomeVC_Tests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BD788E53BC00E950A458CE650925ABCD /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2F2446868DEA21BDD9D1AF2DFDBF95F8 /* Pods-POPWelcomeVC_Example-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
-/* Begin PBXNativeTarget section */
-		5C8A3E79509555DDF69EEFE5D1887ADE /* POPWelcomeVC */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 60BB4341AF7E064AE08E7C85A4F434C2 /* Build configuration list for PBXNativeTarget "POPWelcomeVC" */;
-			buildPhases = (
-				CFAE6BA0479176C75AAA0528D58DC2A2 /* Sources */,
-				296647DDD3E44D2E11307F7AA5E65380 /* Frameworks */,
-				86506D00D7FB1446AA32C32CCC0B7A17 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				108D91FF0A7E8225795B25936B870A25 /* PBXTargetDependency */,
-			);
-			name = POPWelcomeVC;
-			productName = POPWelcomeVC;
-			productReference = FE2F3BA16C8FCDC567B7B60645212CBC /* POPWelcomeVC.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		61A75130DD53BECD3A45F5448758D2DA /* POPLib */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 67F9002A4225AE24A8A5A90761A4D437 /* Build configuration list for PBXNativeTarget "POPLib" */;
-			buildPhases = (
-				F36AB51D0B1A0D81F17727EE11D67DD4 /* Sources */,
-				030963C31495C1A404EA8973A4D67023 /* Frameworks */,
-				31F4A866121B6F4309D88BBCACC9F944 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				626097C37808005166B7536026385AF2 /* PBXTargetDependency */,
-			);
-			name = POPLib;
-			productName = POPLib;
-			productReference = 77BBBDF50CD9857BA698749A26BAB440 /* POPLib.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		81942C854EFDD80C744A46AE42A7789F /* Pods-POPWelcomeVC_Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 87EB1612D903D3E34CC22D3D219542FD /* Build configuration list for PBXNativeTarget "Pods-POPWelcomeVC_Tests" */;
-			buildPhases = (
-				0ED8EF0557E9F4AB5439FD8B26903F58 /* Sources */,
-				CEB63DE65C55F97A5F9A4BF0EA0DFB81 /* Frameworks */,
-				A6DD539BE46B157014DCAC393ADDCA6A /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				EADEDBCEC9A178AE54FABED776E02E85 /* PBXTargetDependency */,
-				5CB867D10667F9599238B2A195084D39 /* PBXTargetDependency */,
-				61A6392037C9DD503BDE937DE4CFC9AD /* PBXTargetDependency */,
-			);
-			name = "Pods-POPWelcomeVC_Tests";
-			productName = "Pods-POPWelcomeVC_Tests";
-			productReference = 78CA5B3D17BD03AA4BCAF1DA1DA3EC60 /* Pods_POPWelcomeVC_Tests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		D79B02370A3CB411638F612342326EF9 /* Pods-POPWelcomeVC_Example */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 16A7E182116B6014BD399A4A079C98CF /* Build configuration list for PBXNativeTarget "Pods-POPWelcomeVC_Example" */;
-			buildPhases = (
-				C139990B0762B1F3C254C60ED4DA3DAC /* Sources */,
-				0650ADF953653F0612CD0DA1F5679D9A /* Frameworks */,
-				BD788E53BC00E950A458CE650925ABCD /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				83889A3362192B0C8F04EB6442CE006C /* PBXTargetDependency */,
-				285D51E2BEE01753A7C0522E14392382 /* PBXTargetDependency */,
-				502DF1B4222F68A6064AC57CA490A07E /* PBXTargetDependency */,
-			);
-			name = "Pods-POPWelcomeVC_Example";
-			productName = "Pods-POPWelcomeVC_Example";
-			productReference = 4EB236D4EE921A410C2F41EA4F823267 /* Pods_POPWelcomeVC_Example.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		E61CE3B6DFA1FE6B3E296965C76C0E10 /* MBProgressHUD */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0ECAD3CE95CA19E5AFE91894C857527C /* Build configuration list for PBXNativeTarget "MBProgressHUD" */;
-			buildPhases = (
-				2DAFB06DF9D4B76E7F94DA2B8A63DD59 /* Sources */,
-				6488DB2C9BB99C53077D390CE673DD56 /* Frameworks */,
-				9ECCB5570B7FBF8D348655FFA0FE9C90 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = MBProgressHUD;
-			productName = MBProgressHUD;
-			productReference = B09F4D322731C6290E7647831C6019D8 /* MBProgressHUD.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0700;
-			};
-			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-			);
-			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 325477523DE6D7DD4D5505017DF3381A /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				E61CE3B6DFA1FE6B3E296965C76C0E10 /* MBProgressHUD */,
-				D79B02370A3CB411638F612342326EF9 /* Pods-POPWelcomeVC_Example */,
-				81942C854EFDD80C744A46AE42A7789F /* Pods-POPWelcomeVC_Tests */,
-				61A75130DD53BECD3A45F5448758D2DA /* POPLib */,
-				5C8A3E79509555DDF69EEFE5D1887ADE /* POPWelcomeVC */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXSourcesBuildPhase section */
-		0ED8EF0557E9F4AB5439FD8B26903F58 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B0351804F5299D39E85704769B2CC677 /* Pods-POPWelcomeVC_Tests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2DAFB06DF9D4B76E7F94DA2B8A63DD59 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BB010EE04BA829E196554A00A951AA7C /* MBProgressHUD-dummy.m in Sources */,
-				9E17CC11959A1FE5566CE528047ACDC0 /* MBProgressHUD.m in Sources */,
-				4E37650B1CB2962A00F631C9 /* POPWelcomeVC.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C139990B0762B1F3C254C60ED4DA3DAC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				ABD96A4DD960FCFD167E63795DB9518B /* Pods-POPWelcomeVC_Example-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CFAE6BA0479176C75AAA0528D58DC2A2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FD00801B3DEFF9BADE08B429805FF86B /* AppWelcomeVC.m in Sources */,
-				827A553DFE2DC1B3CFD9B12E84A807E2 /* POPWelcomeVC-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F36AB51D0B1A0D81F17727EE11D67DD4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9ADF25AB118800F1BA971B9B38374C9C /* ALAssetsLibrary+CustomPhotoAlbum.m in Sources */,
-				20AC8683819688CFAB29B2B905786887 /* CommonLib.m in Sources */,
-				8AB047CB155C69A2195F62AA7F3F327E /* CoreData.m in Sources */,
-				FA6DDD6B64825CC9F18986E3D9A1CBC8 /* DateLib.m in Sources */,
-				D015B705DCB189EF608793A477700B7B /* DateObject.m in Sources */,
-				DDCE427FDC25E94B1191247061E31B6E /* FileLib.m in Sources */,
-				C34E4CBF55F876572DCE355D6B93DA6B /* GameCenterLib2.m in Sources */,
-				B2EAEB7A2BBEE89BFB3897201295234D /* Hashtable.m in Sources */,
-				9F0D01802FFAC84E9FC6123B873ADAD0 /* ImageLib.m in Sources */,
-				349182AA12227544D165A87B3CE7E316 /* InAppPurchaseLib.m in Sources */,
-				7D31C743E3AA8475776393967E2E2998 /* NetLib.m in Sources */,
-				5B5756D41AFE311610F85969DBA46A0D /* NSDate+NVTimeAgo.m in Sources */,
-				C9CC3D4DE69CB347E400107455B91D4E /* ObserverObject.m in Sources */,
-				BD6AF3EB5BA58A0FDCDB306BFE8451A2 /* POPLib-dummy.m in Sources */,
-				298DA5B8A6C99BD86D7018B0C29CF13B /* Reachability.m in Sources */,
-				A7ECCFA6D1BFDFD3EC4A93F615A2ABE7 /* ReturnSet.m in Sources */,
-				DEB7F287E5ADB45978814DF02CF2F185 /* StringLib.m in Sources */,
-				F849F98ECA9EC380BBB87FA1760F4E2B /* ViewLib.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		108D91FF0A7E8225795B25936B870A25 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = POPLib;
-			target = 61A75130DD53BECD3A45F5448758D2DA /* POPLib */;
-			targetProxy = 11DFB181D1777767827C2E8940C6C251 /* PBXContainerItemProxy */;
-		};
-		285D51E2BEE01753A7C0522E14392382 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = POPLib;
-			target = 61A75130DD53BECD3A45F5448758D2DA /* POPLib */;
-			targetProxy = AA2BB2139D87629B9BA50C30BA192BF9 /* PBXContainerItemProxy */;
-		};
-		502DF1B4222F68A6064AC57CA490A07E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = POPWelcomeVC;
-			target = 5C8A3E79509555DDF69EEFE5D1887ADE /* POPWelcomeVC */;
-			targetProxy = 0592127AF78EE65EE6D4442668C1115B /* PBXContainerItemProxy */;
-		};
-		5CB867D10667F9599238B2A195084D39 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = POPLib;
-			target = 61A75130DD53BECD3A45F5448758D2DA /* POPLib */;
-			targetProxy = 273958E79C4729A8BD98B2C0E94283B1 /* PBXContainerItemProxy */;
-		};
-		61A6392037C9DD503BDE937DE4CFC9AD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = POPWelcomeVC;
-			target = 5C8A3E79509555DDF69EEFE5D1887ADE /* POPWelcomeVC */;
-			targetProxy = 01F8814AD1DF4B0DF3187C1A34E0477D /* PBXContainerItemProxy */;
-		};
-		626097C37808005166B7536026385AF2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = MBProgressHUD;
-			target = E61CE3B6DFA1FE6B3E296965C76C0E10 /* MBProgressHUD */;
-			targetProxy = 8FA1CBF061138309C66E2F8658FFFE29 /* PBXContainerItemProxy */;
-		};
-		83889A3362192B0C8F04EB6442CE006C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = MBProgressHUD;
-			target = E61CE3B6DFA1FE6B3E296965C76C0E10 /* MBProgressHUD */;
-			targetProxy = D7A7E12A2E2F3C4A7B69CA239CB4FCDE /* PBXContainerItemProxy */;
-		};
-		EADEDBCEC9A178AE54FABED776E02E85 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = MBProgressHUD;
-			target = E61CE3B6DFA1FE6B3E296965C76C0E10 /* MBProgressHUD */;
-			targetProxy = 57472AD26A9DB7751F49108CEBE2E576 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin XCBuildConfiguration section */
-		03CA91998D6773EC5D02B3DB87B8353E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		0B57334D6C23DADAA4F7D802A5760EB2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				ONLY_ACTIVE_ARCH = YES;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Debug;
-		};
-		1CA03CD7B0CADA6F664B173B6CE8EFD5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DBB0899F58ADB949B6B240072A6B5B6E /* Pods-POPWelcomeVC_Example.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-POPWelcomeVC_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-POPWelcomeVC_Example/Pods-POPWelcomeVC_Example.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_POPWelcomeVC_Example;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		2048E4D804203FBF4EA0DA67F6E3D5F4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4A9E7545E4E7B09C17B06D9DFDD3483F /* POPWelcomeVC.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/POPWelcomeVC/POPWelcomeVC-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/POPWelcomeVC/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/POPWelcomeVC/POPWelcomeVC.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = POPWelcomeVC;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		55D09FF22821BAB1D2AC90921A6FE75E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 921EE35FFB62722A4510B904880ED310 /* Pods-POPWelcomeVC_Example.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-POPWelcomeVC_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-POPWelcomeVC_Example/Pods-POPWelcomeVC_Example.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_POPWelcomeVC_Example;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		613A742D2C88AC069559B392B692477C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E8E3A5E808D598D28CB4BF533A108E55 /* Pods-POPWelcomeVC_Tests.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-POPWelcomeVC_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-POPWelcomeVC_Tests/Pods-POPWelcomeVC_Tests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_POPWelcomeVC_Tests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		764C039C036F259CEFBCA7887E667DA1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EFC335FBCA2FEE88ADE0687881286392 /* MBProgressHUD.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/MBProgressHUD/MBProgressHUD-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/MBProgressHUD/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/MBProgressHUD/MBProgressHUD.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = MBProgressHUD;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		94140E0ECD9CC38129FE0223F87D68B6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6AF986D4E832991EF88AC0641633D6EA /* POPLib.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/POPLib/POPLib-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/POPLib/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/POPLib/POPLib.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = POPLib;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		ABFEB73FE268CE20717A44451E63E570 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EFC335FBCA2FEE88ADE0687881286392 /* MBProgressHUD.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/MBProgressHUD/MBProgressHUD-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/MBProgressHUD/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/MBProgressHUD/MBProgressHUD.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = MBProgressHUD;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		BEE83889BC50FA8A4BF972F60AB0FF6C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DBC4FE80591F3DE93211ECB35E257F21 /* Pods-POPWelcomeVC_Tests.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-POPWelcomeVC_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-POPWelcomeVC_Tests/Pods-POPWelcomeVC_Tests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_POPWelcomeVC_Tests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		C3789BF44D5B1CFFBDD636FD5B503728 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4A9E7545E4E7B09C17B06D9DFDD3483F /* POPWelcomeVC.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/POPWelcomeVC/POPWelcomeVC-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/POPWelcomeVC/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/POPWelcomeVC/POPWelcomeVC.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = POPWelcomeVC;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		D84A2CEC57BFB04AF5B3319A95B5A877 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6AF986D4E832991EF88AC0641633D6EA /* POPLib.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/POPLib/POPLib-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/POPLib/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/POPLib/POPLib.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = POPLib;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		0ECAD3CE95CA19E5AFE91894C857527C /* Build configuration list for PBXNativeTarget "MBProgressHUD" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				764C039C036F259CEFBCA7887E667DA1 /* Debug */,
-				ABFEB73FE268CE20717A44451E63E570 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		16A7E182116B6014BD399A4A079C98CF /* Build configuration list for PBXNativeTarget "Pods-POPWelcomeVC_Example" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1CA03CD7B0CADA6F664B173B6CE8EFD5 /* Debug */,
-				55D09FF22821BAB1D2AC90921A6FE75E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0B57334D6C23DADAA4F7D802A5760EB2 /* Debug */,
-				03CA91998D6773EC5D02B3DB87B8353E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		60BB4341AF7E064AE08E7C85A4F434C2 /* Build configuration list for PBXNativeTarget "POPWelcomeVC" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2048E4D804203FBF4EA0DA67F6E3D5F4 /* Debug */,
-				C3789BF44D5B1CFFBDD636FD5B503728 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		67F9002A4225AE24A8A5A90761A4D437 /* Build configuration list for PBXNativeTarget "POPLib" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				94140E0ECD9CC38129FE0223F87D68B6 /* Debug */,
-				D84A2CEC57BFB04AF5B3319A95B5A877 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		87EB1612D903D3E34CC22D3D219542FD /* Build configuration list for PBXNativeTarget "Pods-POPWelcomeVC_Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BEE83889BC50FA8A4BF972F60AB0FF6C /* Debug */,
-				613A742D2C88AC069559B392B692477C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>01F8814AD1DF4B0DF3187C1A34E0477D</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>5C8A3E79509555DDF69EEFE5D1887ADE</string>
+			<key>remoteInfo</key>
+			<string>POPWelcomeVC</string>
+		</dict>
+		<key>030963C31495C1A404EA8973A4D67023</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>7207B86E26E32876D9CF148101BFEFB5</string>
+				<string>B02977C10E6A1F100064B5F186BEA08B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>03CA91998D6773EC5D02B3DB87B8353E</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>RELEASE=1</string>
+				</array>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.1</string>
+				<key>STRIP_INSTALLED_PRODUCT</key>
+				<string>NO</string>
+				<key>SYMROOT</key>
+				<string>${SRCROOT}/../build</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>0592127AF78EE65EE6D4442668C1115B</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>5C8A3E79509555DDF69EEFE5D1887ADE</string>
+			<key>remoteInfo</key>
+			<string>POPWelcomeVC</string>
+		</dict>
+		<key>0650ADF953653F0612CD0DA1F5679D9A</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>A2838D033DD4F3494C6976FBDD92F169</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>06859BA7C8BD9187660218A2A4AEDFEC</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>ALAssetsLibrary+CustomPhotoAlbum.h</string>
+			<key>path</key>
+			<string>Pod/Classes/Extend/ALAssetsLibrary+CustomPhotoAlbum.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0B57334D6C23DADAA4F7D802A5760EB2</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.1</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>STRIP_INSTALLED_PRODUCT</key>
+				<string>NO</string>
+				<key>SYMROOT</key>
+				<string>${SRCROOT}/../build</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>0ECAD3CE95CA19E5AFE91894C857527C</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>764C039C036F259CEFBCA7887E667DA1</string>
+				<string>ABFEB73FE268CE20717A44451E63E570</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>0ED8EF0557E9F4AB5439FD8B26903F58</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>B0351804F5299D39E85704769B2CC677</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>0F6FCF15CC1F4F05C46539443FDA2AAB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5107024517FD47CD11481EF8550141CE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>108D91FF0A7E8225795B25936B870A25</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>POPLib</string>
+			<key>target</key>
+			<string>61A75130DD53BECD3A45F5448758D2DA</string>
+			<key>targetProxy</key>
+			<string>11DFB181D1777767827C2E8940C6C251</string>
+		</dict>
+		<key>11DFB181D1777767827C2E8940C6C251</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>61A75130DD53BECD3A45F5448758D2DA</string>
+			<key>remoteInfo</key>
+			<string>POPLib</string>
+		</dict>
+		<key>16740DFC9767CEEE289DA3055AFF39F7</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>POPLib-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>16A7E182116B6014BD399A4A079C98CF</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>1CA03CD7B0CADA6F664B173B6CE8EFD5</string>
+				<string>55D09FF22821BAB1D2AC90921A6FE75E</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>171129E8F57602B4CBCC2EA866C60F77</key>
+		<dict>
+			<key>fileRef</key>
+			<string>746C3C16F7168EA5040470F2B038137A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>17B80C7DBDE40F44D214529CF58038DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2CAED3FC2AFC998F6749300D4CFDC792</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>1A3116F7100FDBD23C5BE5B5AEC02E3A</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>POPLib.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>1B254CC000F8E741ED9E11A4B9CFFE42</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>Reachability.h</string>
+			<key>path</key>
+			<string>Pod/Classes/Custom/Reachability.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1B53929EDEBBC5A8BA650D8F9BF044AA</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EF3093F5FCEECD70247A1B334DD8FA54</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>1CA03CD7B0CADA6F664B173B6CE8EFD5</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>DBB0899F58ADB949B6B240072A6B5B6E</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/Pods-POPWelcomeVC_Example/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.1</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MACH_O_TYPE</key>
+				<string>staticlib</string>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/Pods-POPWelcomeVC_Example/Pods-POPWelcomeVC_Example.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PODS_ROOT</key>
+				<string>$(SRCROOT)</string>
+				<key>PRODUCT_NAME</key>
+				<string>Pods_POPWelcomeVC_Example</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>1DC711CF50FA99DC345CAF33E49C96DB</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>DateLib.h</string>
+			<key>path</key>
+			<string>Pod/Classes/Common/DateLib.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1E0F8C2365EE7E5EFC253CC843002BE0</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>MBProgressHUD.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>1E7623B9420C3E71FAE3287C0CECA040</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4BEBE0D6CAD3EEE48BFA636EB15C8656</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>2048E4D804203FBF4EA0DA67F6E3D5F4</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>4A9E7545E4E7B09C17B06D9DFDD3483F</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/POPWelcomeVC/POPWelcomeVC-prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/POPWelcomeVC/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.1</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/POPWelcomeVC/POPWelcomeVC.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>PRODUCT_NAME</key>
+				<string>POPWelcomeVC</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>20AC8683819688CFAB29B2B905786887</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CDB48289F05941FA1406BF6A74ABA9DD</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2102871F6865EDFABA25AC3E16952247</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Pods-POPWelcomeVC_Tests-acknowledgements.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>21890F3939220334274256A61B978E59</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>AppWelcomeVC.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2320700CA60032903BE5C2C92B5E510A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>NSDate+NVTimeAgo.m</string>
+			<key>path</key>
+			<string>Pod/Classes/Extend/NSDate+NVTimeAgo.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>23ABEA91ED13B1A040782EB37B326003</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>ObserverObject.h</string>
+			<key>path</key>
+			<string>Pod/Classes/Custom/ObserverObject.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>24AF08C510E113557C6DA1AE9A413118</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Pods-POPWelcomeVC_Example-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>24DE86EFD146F4BFC60F132DB2C6DEC4</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>DateObject.m</string>
+			<key>path</key>
+			<string>Pod/Classes/Custom/DateObject.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>25F88414C1814818FD39DEEE615B4850</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>273958E79C4729A8BD98B2C0E94283B1</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>61A75130DD53BECD3A45F5448758D2DA</string>
+			<key>remoteInfo</key>
+			<string>POPLib</string>
+		</dict>
+		<key>278CEB7CCF2ECC258E1016A7205FA89C</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>ViewLib.h</string>
+			<key>path</key>
+			<string>Pod/Classes/Common/ViewLib.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>285782931C3D72AA7810C6D7CEA6423E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>23ABEA91ED13B1A040782EB37B326003</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>285D51E2BEE01753A7C0522E14392382</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>POPLib</string>
+			<key>target</key>
+			<string>61A75130DD53BECD3A45F5448758D2DA</string>
+			<key>targetProxy</key>
+			<string>AA2BB2139D87629B9BA50C30BA192BF9</string>
+		</dict>
+		<key>296647DDD3E44D2E11307F7AA5E65380</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>CE299C12FBF4FD42D40511499DBB5001</string>
+				<string>D84DBC3B9456F1A679DC6A7124B6988F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>298DA5B8A6C99BD86D7018B0C29CF13B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B5868E2332FEEA725C824616DB6A2311</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2CAED3FC2AFC998F6749300D4CFDC792</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>POPLib-umbrella.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2D8E8EC45A3A1A1D94AE762CB5028504</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>0B57334D6C23DADAA4F7D802A5760EB2</string>
+				<string>03CA91998D6773EC5D02B3DB87B8353E</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>2DAFB06DF9D4B76E7F94DA2B8A63DD59</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>BB010EE04BA829E196554A00A951AA7C</string>
+				<string>9E17CC11959A1FE5566CE528047ACDC0</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>2EF53A5FDC0D8C1B9E071F9980B71953</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>A806EF333E4C12B93F64E8578AEE9487</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Development Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2F2446868DEA21BDD9D1AF2DFDBF95F8</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7FD76B710E487A7F1E81DCDEA6ABDD7F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>3027D44CAF9997E78C2D8ADC0CB0E8EA</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>POPWelcomeVC-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>30BDE99FC49EF0607E2295C40DD3F14B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>StringLib.m</string>
+			<key>path</key>
+			<string>Pod/Classes/Common/StringLib.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>31F4A866121B6F4309D88BBCACC9F944</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>E2A8853DAA9E10BB48910D57863969E6</string>
+				<string>E2AB44C20EFA3BFD162942F8FA5F7EFF</string>
+				<string>DB7DE63851EB9B7210FEF53F6400AC6E</string>
+				<string>E0AE5ED0FB23472CF9A7FC914561D2DB</string>
+				<string>CEFD44C75A33A60FFDE1DE47905587E1</string>
+				<string>933C5BDAE42B2F9D4575C435DF83DEED</string>
+				<string>A59140693411CA98476DD6CCF40F7681</string>
+				<string>D5E03BDB7476CC44AAA0717CE9A028F7</string>
+				<string>EE1774F18178887AE19B474B22F9846C</string>
+				<string>AA437635DA5555FAF44D9F28D6CA9D38</string>
+				<string>38ED8138A8B6753A0E7D7462E8B8DA77</string>
+				<string>171129E8F57602B4CBCC2EA866C60F77</string>
+				<string>95BD8D291D940174A5BD66E2AA574788</string>
+				<string>285782931C3D72AA7810C6D7CEA6423E</string>
+				<string>17B80C7DBDE40F44D214529CF58038DC</string>
+				<string>9CF761A90B48962239F3CCDE458F6661</string>
+				<string>C27BAF0FA678F49225835B170D490882</string>
+				<string>A4823EBBCB4FC7FA4C69370FCB894593</string>
+				<string>1B53929EDEBBC5A8BA650D8F9BF044AA</string>
+				<string>4CE9C19317725398CC31B95B1FA17F87</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>325477523DE6D7DD4D5505017DF3381A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>B09F4D322731C6290E7647831C6019D8</string>
+				<string>4EB236D4EE921A410C2F41EA4F823267</string>
+				<string>78CA5B3D17BD03AA4BCAF1DA1DA3EC60</string>
+				<string>77BBBDF50CD9857BA698749A26BAB440</string>
+				<string>FE2F3BA16C8FCDC567B7B60645212CBC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>349182AA12227544D165A87B3CE7E316</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D75B369DA42FE99DFB1643AE20D61189</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>37F510F8566DAADC50E29EE126C2BE3A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>53B5909140513900ECD9A4022F3EB6F9</string>
+				<string>6650A4984A011C9DE95015D0541E0E28</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>iOS</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>38ED8138A8B6753A0E7D7462E8B8DA77</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5C0C61208265C239CDCBC2F4C13CD572</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>3DB6583021B7AB827FA7D05F1D2ACC59</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.script.sh</string>
+			<key>path</key>
+			<string>Pods-POPWelcomeVC_Example-resources.sh</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3F1CCEF889859FC42A155D7381D221D2</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>GameCenterLib2.m</string>
+			<key>path</key>
+			<string>Pod/Classes/Common/GameCenterLib2.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>40C42F3F5DD94F29414FB7BF431221AC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>53B5909140513900ECD9A4022F3EB6F9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>45B3683A512EB87877AF07518C5040E5</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>864FFD34AFA846FBCC8C9320ECA7DE9E</string>
+				<string>539681EE87EE9C321DE3FF20CDE6F202</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Targets Support Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>479CD26941F6D0121061DAE1DB76BDF8</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>CoreData.h</string>
+			<key>path</key>
+			<string>Pod/Classes/Common/CoreData.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4A8B94855675EF95ECD4A79C928AE3DE</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>C4E288A7803956BCCFA813DE15A47E2E</string>
+				<string>F03D4105E44553ECF3818F05495337C5</string>
+				<string>894FB24D837FB2FD6BDB0F41D2864D49</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>4A9E7545E4E7B09C17B06D9DFDD3483F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>POPWelcomeVC.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4BEBE0D6CAD3EEE48BFA636EB15C8656</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>MBProgressHUD.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4CE9C19317725398CC31B95B1FA17F87</key>
+		<dict>
+			<key>fileRef</key>
+			<string>278CEB7CCF2ECC258E1016A7205FA89C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>4EB236D4EE921A410C2F41EA4F823267</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>Pods_POPWelcomeVC_Example.framework</string>
+			<key>path</key>
+			<string>Pods_POPWelcomeVC_Example.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>502DF1B4222F68A6064AC57CA490A07E</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>POPWelcomeVC</string>
+			<key>target</key>
+			<string>5C8A3E79509555DDF69EEFE5D1887ADE</string>
+			<key>targetProxy</key>
+			<string>0592127AF78EE65EE6D4442668C1115B</string>
+		</dict>
+		<key>5107024517FD47CD11481EF8550141CE</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>MBProgressHUD-umbrella.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>51706C06F5B308F09EBF277DCA521D39</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6A43F0FDC936387E71B0BF62F282B431</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>539681EE87EE9C321DE3FF20CDE6F202</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>8D375CA5478F1DC55F5C4C6D358CAA59</string>
+				<string>90F9D41D1644E04EEA4D0E1486F763C4</string>
+				<string>D304F5770F456D5FD6FD977E39D3FFE1</string>
+				<string>2102871F6865EDFABA25AC3E16952247</string>
+				<string>B66DBD81F0D5914011509C714826BA29</string>
+				<string>849CAD02DDC7E81A4A5CBC23281B5081</string>
+				<string>7602A6C3530F95EAD567F8CEF328A607</string>
+				<string>5AC00013F3374E375E11BF0E04D66B09</string>
+				<string>DBC4FE80591F3DE93211ECB35E257F21</string>
+				<string>E8E3A5E808D598D28CB4BF533A108E55</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods-POPWelcomeVC_Tests</string>
+			<key>path</key>
+			<string>Target Support Files/Pods-POPWelcomeVC_Tests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>53B5909140513900ECD9A4022F3EB6F9</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CoreGraphics.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/CoreGraphics.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>55D09FF22821BAB1D2AC90921A6FE75E</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>921EE35FFB62722A4510B904880ED310</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/Pods-POPWelcomeVC_Example/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.1</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MACH_O_TYPE</key>
+				<string>staticlib</string>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/Pods-POPWelcomeVC_Example/Pods-POPWelcomeVC_Example.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PODS_ROOT</key>
+				<string>$(SRCROOT)</string>
+				<key>PRODUCT_NAME</key>
+				<string>Pods_POPWelcomeVC_Example</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>5647314BD413E7260983F054FF48DF7A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6D8FB2FE5BC39738DC583D8F68548111</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>56AB86523A593FF79413539A5F067F02</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>POPWelcomeVC.modulemap</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>57472AD26A9DB7751F49108CEBE2E576</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>E61CE3B6DFA1FE6B3E296965C76C0E10</string>
+			<key>remoteInfo</key>
+			<string>MBProgressHUD</string>
+		</dict>
+		<key>5AC00013F3374E375E11BF0E04D66B09</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Pods-POPWelcomeVC_Tests-umbrella.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5B5756D41AFE311610F85969DBA46A0D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2320700CA60032903BE5C2C92B5E510A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>5C0C61208265C239CDCBC2F4C13CD572</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>InAppPurchaseLib.h</string>
+			<key>path</key>
+			<string>Pod/Classes/Common/InAppPurchaseLib.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5C8A3E79509555DDF69EEFE5D1887ADE</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>60BB4341AF7E064AE08E7C85A4F434C2</string>
+			<key>buildPhases</key>
+			<array>
+				<string>4A8B94855675EF95ECD4A79C928AE3DE</string>
+				<string>296647DDD3E44D2E11307F7AA5E65380</string>
+				<string>6B25282D41674DD8DBAB28364C6C57A9</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>108D91FF0A7E8225795B25936B870A25</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>POPWelcomeVC</string>
+			<key>productName</key>
+			<string>POPWelcomeVC</string>
+			<key>productReference</key>
+			<string>FE2F3BA16C8FCDC567B7B60645212CBC</string>
+			<key>productType</key>
+			<string>com.apple.product-type.framework</string>
+		</dict>
+		<key>5CB867D10667F9599238B2A195084D39</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>POPLib</string>
+			<key>target</key>
+			<string>61A75130DD53BECD3A45F5448758D2DA</string>
+			<key>targetProxy</key>
+			<string>273958E79C4729A8BD98B2C0E94283B1</string>
+		</dict>
+		<key>609DD25AD2E438EC5F5211B36E1383C5</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>F6B4C8302DC146FD16CB2C6205AD1EBF</string>
+				<string>D2A58CC373FB52D952EC32196AB43F6C</string>
+				<string>EFC335FBCA2FEE88ADE0687881286392</string>
+				<string>9A7A2C91243D36FC1D549D37A32A049E</string>
+				<string>8C2DCA0C48B078F9AC18A7A068BC141B</string>
+				<string>5107024517FD47CD11481EF8550141CE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
+			<key>path</key>
+			<string>../Target Support Files/MBProgressHUD</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>60AE131ED9038D7B37D24B9181D53E43</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>POPWelcomeVC-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>60BB4341AF7E064AE08E7C85A4F434C2</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>2048E4D804203FBF4EA0DA67F6E3D5F4</string>
+				<string>C3789BF44D5B1CFFBDD636FD5B503728</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>613A742D2C88AC069559B392B692477C</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>E8E3A5E808D598D28CB4BF533A108E55</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/Pods-POPWelcomeVC_Tests/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.1</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MACH_O_TYPE</key>
+				<string>staticlib</string>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/Pods-POPWelcomeVC_Tests/Pods-POPWelcomeVC_Tests.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PODS_ROOT</key>
+				<string>$(SRCROOT)</string>
+				<key>PRODUCT_NAME</key>
+				<string>Pods_POPWelcomeVC_Tests</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>61A6392037C9DD503BDE937DE4CFC9AD</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>POPWelcomeVC</string>
+			<key>target</key>
+			<string>5C8A3E79509555DDF69EEFE5D1887ADE</string>
+			<key>targetProxy</key>
+			<string>01F8814AD1DF4B0DF3187C1A34E0477D</string>
+		</dict>
+		<key>61A75130DD53BECD3A45F5448758D2DA</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>67F9002A4225AE24A8A5A90761A4D437</string>
+			<key>buildPhases</key>
+			<array>
+				<string>F36AB51D0B1A0D81F17727EE11D67DD4</string>
+				<string>030963C31495C1A404EA8973A4D67023</string>
+				<string>31F4A866121B6F4309D88BBCACC9F944</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>626097C37808005166B7536026385AF2</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>POPLib</string>
+			<key>productName</key>
+			<string>POPLib</string>
+			<key>productReference</key>
+			<string>77BBBDF50CD9857BA698749A26BAB440</string>
+			<key>productType</key>
+			<string>com.apple.product-type.framework</string>
+		</dict>
+		<key>626097C37808005166B7536026385AF2</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>MBProgressHUD</string>
+			<key>target</key>
+			<string>E61CE3B6DFA1FE6B3E296965C76C0E10</string>
+			<key>targetProxy</key>
+			<string>8FA1CBF061138309C66E2F8658FFFE29</string>
+		</dict>
+		<key>6488DB2C9BB99C53077D390CE673DD56</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>40C42F3F5DD94F29414FB7BF431221AC</string>
+				<string>7223F2D78A55A3B6DF2F4C9373E140BC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>6650A4984A011C9DE95015D0541E0E28</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Foundation.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>67EB6CC3566AD683937B227DC63EDECE</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>21890F3939220334274256A61B978E59</string>
+				<string>F1BBF2D2C2DD6343E1F0C664CB4B634B</string>
+				<string>6D8FB2FE5BC39738DC583D8F68548111</string>
+				<string>7E7CB5D8D8B6A620BE71A4C41A4F0580</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Classes</string>
+			<key>path</key>
+			<string>Classes</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>67F9002A4225AE24A8A5A90761A4D437</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>94140E0ECD9CC38129FE0223F87D68B6</string>
+				<string>D84A2CEC57BFB04AF5B3319A95B5A877</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>6A43F0FDC936387E71B0BF62F282B431</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>POPWelcomeVC-umbrella.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6AF986D4E832991EF88AC0641633D6EA</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>POPLib.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6B25282D41674DD8DBAB28364C6C57A9</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>82581DB0CEAB5555FBE75B88D1053EDB</string>
+				<string>51706C06F5B308F09EBF277DCA521D39</string>
+				<string>5647314BD413E7260983F054FF48DF7A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>6D8FB2FE5BC39738DC583D8F68548111</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>POPWelcomeVC.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6F75E8BD19C72D13C4D3B770ADAF9658</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>GameCenterLib2.h</string>
+			<key>path</key>
+			<string>Pod/Classes/Common/GameCenterLib2.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7207B86E26E32876D9CF148101BFEFB5</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6650A4984A011C9DE95015D0541E0E28</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7223F2D78A55A3B6DF2F4C9373E140BC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6650A4984A011C9DE95015D0541E0E28</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>746C3C16F7168EA5040470F2B038137A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>NetLib.h</string>
+			<key>path</key>
+			<string>Pod/Classes/Common/NetLib.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7602A6C3530F95EAD567F8CEF328A607</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.script.sh</string>
+			<key>path</key>
+			<string>Pods-POPWelcomeVC_Tests-resources.sh</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>762F7F72080F200C0A319B3C8BCE58A0</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>ImageLib.m</string>
+			<key>path</key>
+			<string>Pod/Classes/Common/ImageLib.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>764C039C036F259CEFBCA7887E667DA1</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>EFC335FBCA2FEE88ADE0687881286392</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/MBProgressHUD/MBProgressHUD-prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/MBProgressHUD/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.1</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/MBProgressHUD/MBProgressHUD.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>PRODUCT_NAME</key>
+				<string>MBProgressHUD</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>76E60C917C9046D33FF40A963386F02F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>FileLib.h</string>
+			<key>path</key>
+			<string>Pod/Classes/Common/FileLib.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>77BBBDF50CD9857BA698749A26BAB440</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>POPLib.framework</string>
+			<key>path</key>
+			<string>POPLib.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>785E69B984DC53B9AD582CB6A6306225</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>25F88414C1814818FD39DEEE615B4850</string>
+				<string>56AB86523A593FF79413539A5F067F02</string>
+				<string>4A9E7545E4E7B09C17B06D9DFDD3483F</string>
+				<string>3027D44CAF9997E78C2D8ADC0CB0E8EA</string>
+				<string>60AE131ED9038D7B37D24B9181D53E43</string>
+				<string>6A43F0FDC936387E71B0BF62F282B431</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
+			<key>path</key>
+			<string>Example/Pods/Target Support Files/POPWelcomeVC</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>78CA5B3D17BD03AA4BCAF1DA1DA3EC60</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>Pods_POPWelcomeVC_Tests.framework</string>
+			<key>path</key>
+			<string>Pods_POPWelcomeVC_Tests.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>7D31C743E3AA8475776393967E2E2998</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D1522B520547542029957BEBF6804882</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7DB346D0F39D3F0E887471402A8071AB</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>BA6428E9F66FD5A23C0A2E06ED26CD2F</string>
+				<string>2EF53A5FDC0D8C1B9E071F9980B71953</string>
+				<string>FADB4151220C2F105B54E1B6A7107E1A</string>
+				<string>831EB5C3051F95423A3082ABD727F0AB</string>
+				<string>325477523DE6D7DD4D5505017DF3381A</string>
+				<string>45B3683A512EB87877AF07518C5040E5</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7E7CB5D8D8B6A620BE71A4C41A4F0580</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>POPWelcomeVC.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7FD76B710E487A7F1E81DCDEA6ABDD7F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Pods-POPWelcomeVC_Example-umbrella.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>81942C854EFDD80C744A46AE42A7789F</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>87EB1612D903D3E34CC22D3D219542FD</string>
+			<key>buildPhases</key>
+			<array>
+				<string>0ED8EF0557E9F4AB5439FD8B26903F58</string>
+				<string>CEB63DE65C55F97A5F9A4BF0EA0DFB81</string>
+				<string>A6DD539BE46B157014DCAC393ADDCA6A</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>EADEDBCEC9A178AE54FABED776E02E85</string>
+				<string>5CB867D10667F9599238B2A195084D39</string>
+				<string>61A6392037C9DD503BDE937DE4CFC9AD</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Pods-POPWelcomeVC_Tests</string>
+			<key>productName</key>
+			<string>Pods-POPWelcomeVC_Tests</string>
+			<key>productReference</key>
+			<string>78CA5B3D17BD03AA4BCAF1DA1DA3EC60</string>
+			<key>productType</key>
+			<string>com.apple.product-type.framework</string>
+		</dict>
+		<key>81D8FD4CB5ED8D9339DFCB2503C8FB56</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>CoreData.m</string>
+			<key>path</key>
+			<string>Pod/Classes/Common/CoreData.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>82581DB0CEAB5555FBE75B88D1053EDB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>21890F3939220334274256A61B978E59</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>82ACEED7449C23150AB7C8BBC59FD2D0</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Pods-POPWelcomeVC_Example-acknowledgements.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>831EB5C3051F95423A3082ABD727F0AB</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>F01B0EE0A48FA979CBEDD95ABC108E7F</string>
+				<string>FE0FC58D434B8A6127F1E52B388024D7</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>83889A3362192B0C8F04EB6442CE006C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>MBProgressHUD</string>
+			<key>target</key>
+			<string>E61CE3B6DFA1FE6B3E296965C76C0E10</string>
+			<key>targetProxy</key>
+			<string>D7A7E12A2E2F3C4A7B69CA239CB4FCDE</string>
+		</dict>
+		<key>849CAD02DDC7E81A4A5CBC23281B5081</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.script.sh</string>
+			<key>path</key>
+			<string>Pods-POPWelcomeVC_Tests-frameworks.sh</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>84D9269B769CF92EC4831B7980E4C9FC</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>ViewLib.m</string>
+			<key>path</key>
+			<string>Pod/Classes/Common/ViewLib.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>864FFD34AFA846FBCC8C9320ECA7DE9E</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>FD3DAD8C247D0ACDE7003064F0214691</string>
+				<string>DD3B196FEE9EEB227D29027BC6F0C8F2</string>
+				<string>CB9BFFA1FB26D87B51FA134A12002125</string>
+				<string>82ACEED7449C23150AB7C8BBC59FD2D0</string>
+				<string>24AF08C510E113557C6DA1AE9A413118</string>
+				<string>E316FE157DAB39758F71B88BEC663745</string>
+				<string>3DB6583021B7AB827FA7D05F1D2ACC59</string>
+				<string>7FD76B710E487A7F1E81DCDEA6ABDD7F</string>
+				<string>DBB0899F58ADB949B6B240072A6B5B6E</string>
+				<string>921EE35FFB62722A4510B904880ED310</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods-POPWelcomeVC_Example</string>
+			<key>path</key>
+			<string>Target Support Files/Pods-POPWelcomeVC_Example</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>87AAEE69FDA5F178AA5013845AC55CB8</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>Hashtable.h</string>
+			<key>path</key>
+			<string>Pod/Classes/Custom/Hashtable.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>87EB1612D903D3E34CC22D3D219542FD</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>BEE83889BC50FA8A4BF972F60AB0FF6C</string>
+				<string>613A742D2C88AC069559B392B692477C</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>8827A8960CE617324ACEB937F4382532</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>67EB6CC3566AD683937B227DC63EDECE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pod</string>
+			<key>path</key>
+			<string>Pod</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>894FB24D837FB2FD6BDB0F41D2864D49</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7E7CB5D8D8B6A620BE71A4C41A4F0580</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>8AB047CB155C69A2195F62AA7F3F327E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>81D8FD4CB5ED8D9339DFCB2503C8FB56</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>8AB60573D46A92FF58FC871E591DAE98</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>ALAssetsLibrary+CustomPhotoAlbum.m</string>
+			<key>path</key>
+			<string>Pod/Classes/Extend/ALAssetsLibrary+CustomPhotoAlbum.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8B252ADF77CE9BECE4F1B7DEBA7ED1CE</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>FileLib.m</string>
+			<key>path</key>
+			<string>Pod/Classes/Common/FileLib.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8BC237518E2DD1890A96344AFDDAE68D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>POPLib.modulemap</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8C2DCA0C48B078F9AC18A7A068BC141B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>MBProgressHUD-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8D375CA5478F1DC55F5C4C6D358CAA59</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8FA1CBF061138309C66E2F8658FFFE29</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>E61CE3B6DFA1FE6B3E296965C76C0E10</string>
+			<key>remoteInfo</key>
+			<string>MBProgressHUD</string>
+		</dict>
+		<key>90F9D41D1644E04EEA4D0E1486F763C4</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Pods-POPWelcomeVC_Tests.modulemap</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>921EE35FFB62722A4510B904880ED310</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-POPWelcomeVC_Example.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>933C5BDAE42B2F9D4575C435DF83DEED</key>
+		<dict>
+			<key>fileRef</key>
+			<string>76E60C917C9046D33FF40A963386F02F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>94140E0ECD9CC38129FE0223F87D68B6</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>6AF986D4E832991EF88AC0641633D6EA</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/POPLib/POPLib-prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/POPLib/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.1</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/POPLib/POPLib.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>PRODUCT_NAME</key>
+				<string>POPLib</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>95BD8D291D940174A5BD66E2AA574788</key>
+		<dict>
+			<key>fileRef</key>
+			<string>FB4445CA9CF5B52C0C27910AAF31DC59</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>971AA221FDEB76DBC93B0B58D4B78A0D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>ReturnSet.m</string>
+			<key>path</key>
+			<string>Pod/Classes/Custom/ReturnSet.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9A7A2C91243D36FC1D549D37A32A049E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>MBProgressHUD-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9ADF25AB118800F1BA971B9B38374C9C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8AB60573D46A92FF58FC871E591DAE98</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9CF761A90B48962239F3CCDE458F6661</key>
+		<dict>
+			<key>fileRef</key>
+			<string>ABF81B742F74F034002A6C91A6F6C70D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>9E17CC11959A1FE5566CE528047ACDC0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F26A344EAF8FDAFE24F048B5452D7F80</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>9ECCB5570B7FBF8D348655FFA0FE9C90</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>0F6FCF15CC1F4F05C46539443FDA2AAB</string>
+				<string>1E7623B9420C3E71FAE3287C0CECA040</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>9F0D01802FFAC84E9FC6123B873ADAD0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>762F7F72080F200C0A319B3C8BCE58A0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>A2838D033DD4F3494C6976FBDD92F169</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6650A4984A011C9DE95015D0541E0E28</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>A4823EBBCB4FC7FA4C69370FCB894593</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F7ACADF4071D9C57F774D8D1D6555C60</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>A59140693411CA98476DD6CCF40F7681</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6F75E8BD19C72D13C4D3B770ADAF9658</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>A6DD539BE46B157014DCAC393ADDCA6A</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>CCC4B7231826A8FCD5C1D042C535A6CE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>A6FF9BE7209576221373C78B01B8FBFA</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>CommonLib.h</string>
+			<key>path</key>
+			<string>Pod/Classes/Common/CommonLib.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A7ECCFA6D1BFDFD3EC4A93F615A2ABE7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>971AA221FDEB76DBC93B0B58D4B78A0D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>A806EF333E4C12B93F64E8578AEE9487</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>8827A8960CE617324ACEB937F4382532</string>
+				<string>785E69B984DC53B9AD582CB6A6306225</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>POPWelcomeVC</string>
+			<key>path</key>
+			<string>../..</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A8F469E73167DFA1B1C41E17E82FF513</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>DateObject.h</string>
+			<key>path</key>
+			<string>Pod/Classes/Custom/DateObject.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A99971F00FAB1E34431BF2DE2D7F7FCC</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>GlobalConfig.h</string>
+			<key>path</key>
+			<string>Pod/Classes/GlobalConfig.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AA2BB2139D87629B9BA50C30BA192BF9</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>61A75130DD53BECD3A45F5448758D2DA</string>
+			<key>remoteInfo</key>
+			<string>POPLib</string>
+		</dict>
+		<key>AA437635DA5555FAF44D9F28D6CA9D38</key>
+		<dict>
+			<key>fileRef</key>
+			<string>BE77735B1AA8ABAD506C015B0D55C372</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>ABD96A4DD960FCFD167E63795DB9518B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>24AF08C510E113557C6DA1AE9A413118</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>ABF81B742F74F034002A6C91A6F6C70D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>POPLib.h</string>
+			<key>path</key>
+			<string>Pod/Classes/POPLib.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>ABFEB73FE268CE20717A44451E63E570</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>EFC335FBCA2FEE88ADE0687881286392</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/MBProgressHUD/MBProgressHUD-prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/MBProgressHUD/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.1</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/MBProgressHUD/MBProgressHUD.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>PRODUCT_NAME</key>
+				<string>MBProgressHUD</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>B02977C10E6A1F100064B5F186BEA08B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1E0F8C2365EE7E5EFC253CC843002BE0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B0351804F5299D39E85704769B2CC677</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B66DBD81F0D5914011509C714826BA29</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B09F4D322731C6290E7647831C6019D8</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MBProgressHUD.framework</string>
+			<key>path</key>
+			<string>MBProgressHUD.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>B2EAEB7A2BBEE89BFB3897201295234D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>BE204D8EC27AFBD4EE9F3D637E68DCBA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B5868E2332FEEA725C824616DB6A2311</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>Reachability.m</string>
+			<key>path</key>
+			<string>Pod/Classes/Custom/Reachability.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B5CFCBC3CCC80D4B780C762C8EC75EB7</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>POPLib-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B66DBD81F0D5914011509C714826BA29</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Pods-POPWelcomeVC_Tests-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BA6428E9F66FD5A23C0A2E06ED26CD2F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text</string>
+			<key>name</key>
+			<string>Podfile</string>
+			<key>path</key>
+			<string>../Podfile</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+			<key>xcLanguageSpecificationIdentifier</key>
+			<string>xcode.lang.ruby</string>
+		</dict>
+		<key>BB010EE04BA829E196554A00A951AA7C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9A7A2C91243D36FC1D549D37A32A049E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>BD6AF3EB5BA58A0FDCDB306BFE8451A2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>16740DFC9767CEEE289DA3055AFF39F7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>BD788E53BC00E950A458CE650925ABCD</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>2F2446868DEA21BDD9D1AF2DFDBF95F8</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>BE204D8EC27AFBD4EE9F3D637E68DCBA</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>Hashtable.m</string>
+			<key>path</key>
+			<string>Pod/Classes/Custom/Hashtable.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BE77735B1AA8ABAD506C015B0D55C372</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>ImageLib.h</string>
+			<key>path</key>
+			<string>Pod/Classes/Common/ImageLib.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BEE83889BC50FA8A4BF972F60AB0FF6C</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>DBC4FE80591F3DE93211ECB35E257F21</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/Pods-POPWelcomeVC_Tests/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.1</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MACH_O_TYPE</key>
+				<string>staticlib</string>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/Pods-POPWelcomeVC_Tests/Pods-POPWelcomeVC_Tests.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PODS_ROOT</key>
+				<string>$(SRCROOT)</string>
+				<key>PRODUCT_NAME</key>
+				<string>Pods_POPWelcomeVC_Tests</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>C139990B0762B1F3C254C60ED4DA3DAC</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>ABD96A4DD960FCFD167E63795DB9518B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>C27BAF0FA678F49225835B170D490882</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1B254CC000F8E741ED9E11A4B9CFFE42</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>C34E4CBF55F876572DCE355D6B93DA6B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3F1CCEF889859FC42A155D7381D221D2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C3789BF44D5B1CFFBDD636FD5B503728</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>4A9E7545E4E7B09C17B06D9DFDD3483F</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/POPWelcomeVC/POPWelcomeVC-prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/POPWelcomeVC/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.1</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/POPWelcomeVC/POPWelcomeVC.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>PRODUCT_NAME</key>
+				<string>POPWelcomeVC</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>C41FBBBC850249D1273C833518EEA002</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6650A4984A011C9DE95015D0541E0E28</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C4E288A7803956BCCFA813DE15A47E2E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F1BBF2D2C2DD6343E1F0C664CB4B634B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C54A55052B5615532CADE69F953B1B03</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C9CC3D4DE69CB347E400107455B91D4E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CA195168445B3CD539BC72910080DA24</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>CA195168445B3CD539BC72910080DA24</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>ObserverObject.m</string>
+			<key>path</key>
+			<string>Pod/Classes/Custom/ObserverObject.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CB9BFFA1FB26D87B51FA134A12002125</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text</string>
+			<key>path</key>
+			<string>Pods-POPWelcomeVC_Example-acknowledgements.markdown</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CCC4B7231826A8FCD5C1D042C535A6CE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5AC00013F3374E375E11BF0E04D66B09</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>CDB48289F05941FA1406BF6A74ABA9DD</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>CommonLib.m</string>
+			<key>path</key>
+			<string>Pod/Classes/Common/CommonLib.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CE299C12FBF4FD42D40511499DBB5001</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6650A4984A011C9DE95015D0541E0E28</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>CEB63DE65C55F97A5F9A4BF0EA0DFB81</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>C41FBBBC850249D1273C833518EEA002</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>CEFD44C75A33A60FFDE1DE47905587E1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A8F469E73167DFA1B1C41E17E82FF513</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>D015B705DCB189EF608793A477700B7B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>24DE86EFD146F4BFC60F132DB2C6DEC4</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D1522B520547542029957BEBF6804882</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>NetLib.m</string>
+			<key>path</key>
+			<string>Pod/Classes/Common/NetLib.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D2A58CC373FB52D952EC32196AB43F6C</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>MBProgressHUD.modulemap</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D304F5770F456D5FD6FD977E39D3FFE1</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text</string>
+			<key>path</key>
+			<string>Pods-POPWelcomeVC_Tests-acknowledgements.markdown</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D41D8CD98F00B204E9800998ECF8427E</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastSwiftUpdateCheck</key>
+				<string>0700</string>
+				<key>LastUpgradeCheck</key>
+				<string>0700</string>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>2D8E8EC45A3A1A1D94AE762CB5028504</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+			</array>
+			<key>mainGroup</key>
+			<string>7DB346D0F39D3F0E887471402A8071AB</string>
+			<key>productRefGroup</key>
+			<string>325477523DE6D7DD4D5505017DF3381A</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>E61CE3B6DFA1FE6B3E296965C76C0E10</string>
+				<string>D79B02370A3CB411638F612342326EF9</string>
+				<string>81942C854EFDD80C744A46AE42A7789F</string>
+				<string>61A75130DD53BECD3A45F5448758D2DA</string>
+				<string>5C8A3E79509555DDF69EEFE5D1887ADE</string>
+			</array>
+		</dict>
+		<key>D5E03BDB7476CC44AAA0717CE9A028F7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A99971F00FAB1E34431BF2DE2D7F7FCC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>D75B369DA42FE99DFB1643AE20D61189</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>InAppPurchaseLib.m</string>
+			<key>path</key>
+			<string>Pod/Classes/Common/InAppPurchaseLib.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D79B02370A3CB411638F612342326EF9</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>16A7E182116B6014BD399A4A079C98CF</string>
+			<key>buildPhases</key>
+			<array>
+				<string>C139990B0762B1F3C254C60ED4DA3DAC</string>
+				<string>0650ADF953653F0612CD0DA1F5679D9A</string>
+				<string>BD788E53BC00E950A458CE650925ABCD</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>83889A3362192B0C8F04EB6442CE006C</string>
+				<string>285D51E2BEE01753A7C0522E14392382</string>
+				<string>502DF1B4222F68A6064AC57CA490A07E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Pods-POPWelcomeVC_Example</string>
+			<key>productName</key>
+			<string>Pods-POPWelcomeVC_Example</string>
+			<key>productReference</key>
+			<string>4EB236D4EE921A410C2F41EA4F823267</string>
+			<key>productType</key>
+			<string>com.apple.product-type.framework</string>
+		</dict>
+		<key>D7A7E12A2E2F3C4A7B69CA239CB4FCDE</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>E61CE3B6DFA1FE6B3E296965C76C0E10</string>
+			<key>remoteInfo</key>
+			<string>MBProgressHUD</string>
+		</dict>
+		<key>D84A2CEC57BFB04AF5B3319A95B5A877</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>6AF986D4E832991EF88AC0641633D6EA</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/POPLib/POPLib-prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/POPLib/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.1</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/POPLib/POPLib.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>PRODUCT_NAME</key>
+				<string>POPLib</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>D84DBC3B9456F1A679DC6A7124B6988F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1A3116F7100FDBD23C5BE5B5AEC02E3A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D9B25D90160C85B2F03011D4AABEE15D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>DateLib.m</string>
+			<key>path</key>
+			<string>Pod/Classes/Common/DateLib.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DB7DE63851EB9B7210FEF53F6400AC6E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>479CD26941F6D0121061DAE1DB76BDF8</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>DBB0899F58ADB949B6B240072A6B5B6E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-POPWelcomeVC_Example.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DBC4FE80591F3DE93211ECB35E257F21</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-POPWelcomeVC_Tests.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DD3B196FEE9EEB227D29027BC6F0C8F2</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Pods-POPWelcomeVC_Example.modulemap</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DDCE427FDC25E94B1191247061E31B6E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8B252ADF77CE9BECE4F1B7DEBA7ED1CE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DEB7F287E5ADB45978814DF02CF2F185</key>
+		<dict>
+			<key>fileRef</key>
+			<string>30BDE99FC49EF0607E2295C40DD3F14B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E0AE5ED0FB23472CF9A7FC914561D2DB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1DC711CF50FA99DC345CAF33E49C96DB</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>E2A8853DAA9E10BB48910D57863969E6</key>
+		<dict>
+			<key>fileRef</key>
+			<string>06859BA7C8BD9187660218A2A4AEDFEC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>E2AB44C20EFA3BFD162942F8FA5F7EFF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A6FF9BE7209576221373C78B01B8FBFA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>E316FE157DAB39758F71B88BEC663745</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.script.sh</string>
+			<key>path</key>
+			<string>Pods-POPWelcomeVC_Example-frameworks.sh</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E61CE3B6DFA1FE6B3E296965C76C0E10</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>0ECAD3CE95CA19E5AFE91894C857527C</string>
+			<key>buildPhases</key>
+			<array>
+				<string>2DAFB06DF9D4B76E7F94DA2B8A63DD59</string>
+				<string>6488DB2C9BB99C53077D390CE673DD56</string>
+				<string>9ECCB5570B7FBF8D348655FFA0FE9C90</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>MBProgressHUD</string>
+			<key>productName</key>
+			<string>MBProgressHUD</string>
+			<key>productReference</key>
+			<string>B09F4D322731C6290E7647831C6019D8</string>
+			<key>productType</key>
+			<string>com.apple.product-type.framework</string>
+		</dict>
+		<key>E8E3A5E808D598D28CB4BF533A108E55</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-POPWelcomeVC_Tests.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EADEDBCEC9A178AE54FABED776E02E85</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>MBProgressHUD</string>
+			<key>target</key>
+			<string>E61CE3B6DFA1FE6B3E296965C76C0E10</string>
+			<key>targetProxy</key>
+			<string>57472AD26A9DB7751F49108CEBE2E576</string>
+		</dict>
+		<key>EE1774F18178887AE19B474B22F9846C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>87AAEE69FDA5F178AA5013845AC55CB8</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>EF3093F5FCEECD70247A1B334DD8FA54</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>StringLib.h</string>
+			<key>path</key>
+			<string>Pod/Classes/Common/StringLib.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EFC335FBCA2FEE88ADE0687881286392</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>MBProgressHUD.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F01B0EE0A48FA979CBEDD95ABC108E7F</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>4BEBE0D6CAD3EEE48BFA636EB15C8656</string>
+				<string>F26A344EAF8FDAFE24F048B5452D7F80</string>
+				<string>609DD25AD2E438EC5F5211B36E1383C5</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>MBProgressHUD</string>
+			<key>path</key>
+			<string>MBProgressHUD</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F03D4105E44553ECF3818F05495337C5</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3027D44CAF9997E78C2D8ADC0CB0E8EA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F1BBF2D2C2DD6343E1F0C664CB4B634B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>AppWelcomeVC.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F26A344EAF8FDAFE24F048B5452D7F80</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>MBProgressHUD.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F36AB51D0B1A0D81F17727EE11D67DD4</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>9ADF25AB118800F1BA971B9B38374C9C</string>
+				<string>20AC8683819688CFAB29B2B905786887</string>
+				<string>8AB047CB155C69A2195F62AA7F3F327E</string>
+				<string>FA6DDD6B64825CC9F18986E3D9A1CBC8</string>
+				<string>D015B705DCB189EF608793A477700B7B</string>
+				<string>DDCE427FDC25E94B1191247061E31B6E</string>
+				<string>C34E4CBF55F876572DCE355D6B93DA6B</string>
+				<string>B2EAEB7A2BBEE89BFB3897201295234D</string>
+				<string>9F0D01802FFAC84E9FC6123B873ADAD0</string>
+				<string>349182AA12227544D165A87B3CE7E316</string>
+				<string>7D31C743E3AA8475776393967E2E2998</string>
+				<string>5B5756D41AFE311610F85969DBA46A0D</string>
+				<string>C9CC3D4DE69CB347E400107455B91D4E</string>
+				<string>BD6AF3EB5BA58A0FDCDB306BFE8451A2</string>
+				<string>298DA5B8A6C99BD86D7018B0C29CF13B</string>
+				<string>A7ECCFA6D1BFDFD3EC4A93F615A2ABE7</string>
+				<string>DEB7F287E5ADB45978814DF02CF2F185</string>
+				<string>F849F98ECA9EC380BBB87FA1760F4E2B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>F6B4C8302DC146FD16CB2C6205AD1EBF</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F7ACADF4071D9C57F774D8D1D6555C60</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>ReturnSet.h</string>
+			<key>path</key>
+			<string>Pod/Classes/Custom/ReturnSet.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F849F98ECA9EC380BBB87FA1760F4E2B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>84D9269B769CF92EC4831B7980E4C9FC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>FA6DDD6B64825CC9F18986E3D9A1CBC8</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D9B25D90160C85B2F03011D4AABEE15D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>FADB4151220C2F105B54E1B6A7107E1A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>1E0F8C2365EE7E5EFC253CC843002BE0</string>
+				<string>1A3116F7100FDBD23C5BE5B5AEC02E3A</string>
+				<string>37F510F8566DAADC50E29EE126C2BE3A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>FB2020A9A671513926126A64AD948A2F</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>C54A55052B5615532CADE69F953B1B03</string>
+				<string>8BC237518E2DD1890A96344AFDDAE68D</string>
+				<string>6AF986D4E832991EF88AC0641633D6EA</string>
+				<string>16740DFC9767CEEE289DA3055AFF39F7</string>
+				<string>B5CFCBC3CCC80D4B780C762C8EC75EB7</string>
+				<string>2CAED3FC2AFC998F6749300D4CFDC792</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
+			<key>path</key>
+			<string>../Target Support Files/POPLib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>FB4445CA9CF5B52C0C27910AAF31DC59</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>NSDate+NVTimeAgo.h</string>
+			<key>path</key>
+			<string>Pod/Classes/Extend/NSDate+NVTimeAgo.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>FD3DAD8C247D0ACDE7003064F0214691</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>FE0FC58D434B8A6127F1E52B388024D7</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>06859BA7C8BD9187660218A2A4AEDFEC</string>
+				<string>8AB60573D46A92FF58FC871E591DAE98</string>
+				<string>A6FF9BE7209576221373C78B01B8FBFA</string>
+				<string>CDB48289F05941FA1406BF6A74ABA9DD</string>
+				<string>479CD26941F6D0121061DAE1DB76BDF8</string>
+				<string>81D8FD4CB5ED8D9339DFCB2503C8FB56</string>
+				<string>1DC711CF50FA99DC345CAF33E49C96DB</string>
+				<string>D9B25D90160C85B2F03011D4AABEE15D</string>
+				<string>A8F469E73167DFA1B1C41E17E82FF513</string>
+				<string>24DE86EFD146F4BFC60F132DB2C6DEC4</string>
+				<string>76E60C917C9046D33FF40A963386F02F</string>
+				<string>8B252ADF77CE9BECE4F1B7DEBA7ED1CE</string>
+				<string>6F75E8BD19C72D13C4D3B770ADAF9658</string>
+				<string>3F1CCEF889859FC42A155D7381D221D2</string>
+				<string>A99971F00FAB1E34431BF2DE2D7F7FCC</string>
+				<string>87AAEE69FDA5F178AA5013845AC55CB8</string>
+				<string>BE204D8EC27AFBD4EE9F3D637E68DCBA</string>
+				<string>BE77735B1AA8ABAD506C015B0D55C372</string>
+				<string>762F7F72080F200C0A319B3C8BCE58A0</string>
+				<string>5C0C61208265C239CDCBC2F4C13CD572</string>
+				<string>D75B369DA42FE99DFB1643AE20D61189</string>
+				<string>746C3C16F7168EA5040470F2B038137A</string>
+				<string>D1522B520547542029957BEBF6804882</string>
+				<string>FB4445CA9CF5B52C0C27910AAF31DC59</string>
+				<string>2320700CA60032903BE5C2C92B5E510A</string>
+				<string>23ABEA91ED13B1A040782EB37B326003</string>
+				<string>CA195168445B3CD539BC72910080DA24</string>
+				<string>ABF81B742F74F034002A6C91A6F6C70D</string>
+				<string>1B254CC000F8E741ED9E11A4B9CFFE42</string>
+				<string>B5868E2332FEEA725C824616DB6A2311</string>
+				<string>F7ACADF4071D9C57F774D8D1D6555C60</string>
+				<string>971AA221FDEB76DBC93B0B58D4B78A0D</string>
+				<string>EF3093F5FCEECD70247A1B334DD8FA54</string>
+				<string>30BDE99FC49EF0607E2295C40DD3F14B</string>
+				<string>278CEB7CCF2ECC258E1016A7205FA89C</string>
+				<string>84D9269B769CF92EC4831B7980E4C9FC</string>
+				<string>FB2020A9A671513926126A64AD948A2F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>POPLib</string>
+			<key>path</key>
+			<string>POPLib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>FE2F3BA16C8FCDC567B7B60645212CBC</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>POPWelcomeVC.framework</string>
+			<key>path</key>
+			<string>POPWelcomeVC.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>D41D8CD98F00B204E9800998ECF8427E</string>
+</dict>
+</plist>
