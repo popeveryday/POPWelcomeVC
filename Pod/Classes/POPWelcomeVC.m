@@ -76,7 +76,10 @@
         
         logoView = ImageViewWithImage( (self.logoIphone && !GC_Device_IsIpad) ? self.logoIphone : self.logoImage );
         
-        if(!GC_Device_IsIpad && !self.logoIphone) logoView.frame = CGRectMake(0, 0, logoView.frame.size.width/2, logoView.frame.size.height/2);
+        if(!GC_Device_IsIpad && !self.logoIphone)
+        {
+            logoView.frame = CGRectMake(0, 0, logoView.frame.size.width/2, logoView.frame.size.height/2);
+        }
         
         logoView.center = self.view.center;
         
