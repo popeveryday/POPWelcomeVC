@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name             = "POPWelcomeVC"
-s.version          = "0.1.15"
+s.version          = "0.1.16"
 s.summary          = "Welcome view for displaying logo, loading resources, and show passcode request form for Object-c project."
 s.homepage         = "https://github.com/popeveryday/POPWelcomeVC"
 s.license          = 'MIT'
