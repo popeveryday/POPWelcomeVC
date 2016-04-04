@@ -36,12 +36,12 @@
         
         if ([value isKindOfClass:[NSDictionary class]])
         {
-            if (![StringLib IsValid:[value objectForKey:@"data"]]) {
+            if (![StringLib isValid:[value objectForKey:@"data"]]) {
                 
                 NSDictionary* dic = (NSDictionary*)[value objectForKey:@"relate"];
                 for (NSString* subkey in dic.allKeys) {
                     id subvalue = [dic objectForKey:subkey];
-                    if (([subvalue isKindOfClass:[UIImage class]] && subvalue == nil) || (![subvalue isKindOfClass:[UIImage class]] && ![StringLib IsValid:subvalue]))
+                    if (([subvalue isKindOfClass:[UIImage class]] && subvalue == nil) || (![subvalue isKindOfClass:[UIImage class]] && ![StringLib isValid:subvalue]))
                     {
                         requireFieldsStr = [requireFieldsStr stringByAppendingFormat:@"%@ is Required\n", subkey];
                     }
@@ -50,18 +50,18 @@
         }
         else
         {
-            if (([value isKindOfClass:[UIImage class]] && value == nil) || (![value isKindOfClass:[UIImage class]] && ![StringLib IsValid:value]))
+            if (([value isKindOfClass:[UIImage class]] && value == nil) || (![value isKindOfClass:[UIImage class]] && ![StringLib isValid:value]))
             {
                 requireFieldsStr = [requireFieldsStr stringByAppendingFormat:@"%@ is Required\n", key];
             }
         }
     }
     
-    if ([StringLib IsValid: self.passcode] && ![StringLib IsValid:self.recoveryEmail]) {
+    if ([StringLib isValid: self.passcode] && ![StringLib isValid:self.recoveryEmail]) {
         requireFieldsStr = [requireFieldsStr stringByAppendingFormat:@"%@ is Required\n", @"recoveryEmail"];
     }
     
-    if ([StringLib IsValid:requireFieldsStr]) {
+    if ([StringLib isValid:requireFieldsStr]) {
         [CommonLib alertWithTitle:@"Properties Required" message:requireFieldsStr];
     }else{
         [self reloadWelcomeScreen];
@@ -89,12 +89,12 @@
         logoView.alpha = 1;
     } completion:^(BOOL finish)
      {
-         if (self.isRequireInternet && ![NetLib IsInternetAvailable]) {
+         if (self.isRequireInternet && ![NetLib isInternetAvailable]) {
              [CommonLib alertWithTitle:LocalizedText(@"Connection Error",nil) message:LocalizedText(@"Unable to connect with the server.\nCheck your internet connnection and try again.",nil) container:self cancelButtonTitle:LocalizedText(@"Try again",nil) otherButtonTitles:nil];
              return;
          }
          
-         if ([StringLib IsValid:self.passcode]) {
+         if ([StringLib isValid:self.passcode]) {
              [CommonLib alertSecureInputBoxWithTitle: LocalizedText(@"Passcode Required",nil) message: LocalizedText(@"Enter Passcode to Login",nil) container:self cancelButtonTitle: LocalizedText(@"Forgot Passcode",nil) otherButtonTitles: LocalizedText(@"OK",nil),nil];
          }else{
              [self forwardToMainView];
@@ -135,21 +135,21 @@
             
             
             
-            NSString* title = [StringLib IsValid:self.customEmailTitle] ? self.customEmailTitle : LocalizedText(@"[APPNAME] Password Recovery",nil);
+            NSString* title = [StringLib isValid:self.customEmailTitle] ? self.customEmailTitle : LocalizedText(@"[APPNAME] Password Recovery",nil);
             title = [title stringByReplacingOccurrencesOfString:@"[APPNAME]" withString:self.emailAppName];
-            title = [NetLib URLEncoding: title];
+            title = [NetLib uRLEncoding: title];
             
-            NSString* content = [StringLib IsValid:self.customEmailBody] ? self.customEmailBody : LocalizedText(@"Hello user!\nThis is your old password: [PASS]\nIf you need help or have any questions, please visit [WEBSITE]\n\nSincerely,\n[SENDER].\n-------------------------\nPlease do not reply to this message. Mail sent to this address cannot be answered.",nil);
+            NSString* content = [StringLib isValid:self.customEmailBody] ? self.customEmailBody : LocalizedText(@"Hello user!\nThis is your old password: [PASS]\nIf you need help or have any questions, please visit [WEBSITE]\n\nSincerely,\n[SENDER].\n-------------------------\nPlease do not reply to this message. Mail sent to this address cannot be answered.",nil);
             content = [content stringByReplacingOccurrencesOfString:@"[PASS]" withString:self.passcode];
             content = [content stringByReplacingOccurrencesOfString:@"[WEBSITE]" withString:[[self.emailContactWebsite lowercaseString] stringByReplacingOccurrencesOfString:@"http://" withString:@""]];
             content = [content stringByReplacingOccurrencesOfString:@"[SENDER]" withString:self.emailSenderName];
-            content = [NetLib URLEncoding:content];
+            content = [NetLib uRLEncoding:content];
             
             NSString* url = [NSString stringWithFormat:@"http://services.poptato.com/mailhelper/?from=%@&to=%@&sub=%@&message=%@", self.senderEmailAddress, self.recoveryEmail, title, content];
             
-            ReturnSet* rs = [NetLib DownloadFileToPath:[FileLib GetTempPath:@"sendMail.txt"] url:url];
+            ReturnSet* rs = [NetLib downloadFileToPath:[FileLib getTempPath:@"sendMail.txt"] url:url];
             
-            if (!rs.Result) {
+            if (!rs.result) {
                 [CommonLib alertWithTitle:LocalizedText(@"Send Email Error",nil) message: LocalizedText(@"Recovery email cannot be sent. Please try again later.",nil) container:self cancelButtonTitle: LocalizedText(@"OK",nil) otherButtonTitles:nil];
                 return;
             }

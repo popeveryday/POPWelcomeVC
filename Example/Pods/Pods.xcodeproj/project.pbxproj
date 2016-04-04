@@ -20,6 +20,8 @@
 		38ED8138A8B6753A0E7D7462E8B8DA77 /* InAppPurchaseLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C0C61208265C239CDCBC2F4C13CD572 /* InAppPurchaseLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		40C42F3F5DD94F29414FB7BF431221AC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53B5909140513900ECD9A4022F3EB6F9 /* CoreGraphics.framework */; };
 		4CE9C19317725398CC31B95B1FA17F87 /* ViewLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 278CEB7CCF2ECC258E1016A7205FA89C /* ViewLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4E37650A1CB2962A00F631C9 /* POPWelcomeVC.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E3765081CB2962A00F631C9 /* POPWelcomeVC.h */; };
+		4E37650B1CB2962A00F631C9 /* POPWelcomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3765091CB2962A00F631C9 /* POPWelcomeVC.m */; };
 		5B5756D41AFE311610F85969DBA46A0D /* NSDate+NVTimeAgo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2320700CA60032903BE5C2C92B5E510A /* NSDate+NVTimeAgo.m */; };
 		7207B86E26E32876D9CF148101BFEFB5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6650A4984A011C9DE95015D0541E0E28 /* Foundation.framework */; };
 		7223F2D78A55A3B6DF2F4C9373E140BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6650A4984A011C9DE95015D0541E0E28 /* Foundation.framework */; };
@@ -148,6 +150,8 @@
 		479CD26941F6D0121061DAE1DB76BDF8 /* CoreData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CoreData.h; path = Pod/Classes/Common/CoreData.h; sourceTree = "<group>"; };
 		4A9E7545E4E7B09C17B06D9DFDD3483F /* POPWelcomeVC.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = POPWelcomeVC.xcconfig; sourceTree = "<group>"; };
 		4BEBE0D6CAD3EEE48BFA636EB15C8656 /* MBProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		4E3765081CB2962A00F631C9 /* POPWelcomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPWelcomeVC.h; sourceTree = "<group>"; };
+		4E3765091CB2962A00F631C9 /* POPWelcomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POPWelcomeVC.m; sourceTree = "<group>"; };
 		4E6F5533A129EE2FF8E691CA6C5B1338 /* AppWelcomeVC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AppWelcomeVC.h; sourceTree = "<group>"; };
 		4EB236D4EE921A410C2F41EA4F823267 /* Pods_POPWelcomeVC_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_POPWelcomeVC_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5107024517FD47CD11481EF8550141CE /* MBProgressHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-umbrella.h"; sourceTree = "<group>"; };
@@ -277,6 +281,8 @@
 			children = (
 				4E6F5533A129EE2FF8E691CA6C5B1338 /* AppWelcomeVC.h */,
 				63F88AC15BACD4171C0688C0133DD5B4 /* AppWelcomeVC.m */,
+				4E3765081CB2962A00F631C9 /* POPWelcomeVC.h */,
+				4E3765091CB2962A00F631C9 /* POPWelcomeVC.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -536,6 +542,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F6FCF15CC1F4F05C46539443FDA2AAB /* MBProgressHUD-umbrella.h in Headers */,
+				4E37650A1CB2962A00F631C9 /* POPWelcomeVC.h in Headers */,
 				1E7623B9420C3E71FAE3287C0CECA040 /* MBProgressHUD.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -697,6 +704,7 @@
 			files = (
 				BB010EE04BA829E196554A00A951AA7C /* MBProgressHUD-dummy.m in Sources */,
 				9E17CC11959A1FE5566CE528047ACDC0 /* MBProgressHUD.m in Sources */,
+				4E37650B1CB2962A00F631C9 /* POPWelcomeVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
