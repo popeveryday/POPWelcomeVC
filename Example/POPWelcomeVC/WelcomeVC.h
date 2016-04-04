@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <POPWelcomeVC/AppWelcomeVC.h>
+#import <POPWelcomeVC/POPWelcomeVC.h>
 
-@interface WelcomeVC : AppWelcomeVC
+@interface WelcomeVC : POPWelcomeVC
 
 @end
