@@ -21,7 +21,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
     
+    [self checkRequireProperties];
+}
+
+-(void)checkRequireProperties{
     NSDictionary* requireProperties = @{
                                         @"logoImage": self.logoImage == nil ? @"" : self.logoImage,
                                         @"segueID": self.segueID == nil ? @"" : self.segueID,
