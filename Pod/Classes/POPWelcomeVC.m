@@ -159,14 +159,24 @@
             
             NSString* url = [NSString stringWithFormat:@"http://mhr.chuaphuocan.com/?from=%@&to=%@&sub=%@&message=%@", self.senderEmailAddress, self.recoveryEmail, title, content];
             
-            ReturnSet* rs = [NetLib downloadFileToPath:[FileLib getTempPath:@"sendMail.txt"] url:url];
+            [ViewLib showLoadingWithTitle:@"Connecting to Server" detailText:@"Please wait" uiview:self.view container:nil];
             
-            if (!rs.result) {
-                [CommonLib alertWithTitle:LocalizedText(@"Send Email Error",nil) message: LocalizedText(@"Recovery email cannot be sent. Please try again later.",nil) container:self cancelButtonTitle: LocalizedText(@"OK",nil) otherButtonTitles:nil];
-                return;
-            }
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             
-            [CommonLib alertWithTitle: LocalizedText(@"Send Email Completed",nil) message:[NSString stringWithFormat: LocalizedText(@"Recovery email has been sent to %@. Please check your email.",nil), self.recoveryEmail] container:self cancelButtonTitle: LocalizedText(@"OK",nil) otherButtonTitles:nil];
+                ReturnSet* rs = [NetLib downloadFileToPath:[FileLib getTempPath:@"sendMail.txt"] url:url];
+            
+                [ViewLib hideLoading:self.view];
+                
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    if (!rs.result) {
+                        [CommonLib alertWithTitle:LocalizedText(@"Send Email Error",nil) message: LocalizedText(@"Recovery email cannot be sent. Please try again later.",nil) container:self cancelButtonTitle: LocalizedText(@"OK",nil) otherButtonTitles:nil];
+                        return;
+                    }
+                    
+                    [CommonLib alertWithTitle: LocalizedText(@"Send Email Completed",nil) message:[NSString stringWithFormat: LocalizedText(@"Recovery email has been sent to %@. Please check your email.",nil), self.recoveryEmail] container:self cancelButtonTitle: LocalizedText(@"OK",nil) otherButtonTitles:nil];
+                });
+            });
+            
         }
     }else{
         [CommonLib alertSecureInputBoxWithTitle: LocalizedText(@"Passcode Required",nil) message: LocalizedText(@"Enter Passcode to Login",nil) container:self cancelButtonTitle: LocalizedText(@"Forgot Passcode",nil) otherButtonTitles: LocalizedText(@"OK",nil),nil];
