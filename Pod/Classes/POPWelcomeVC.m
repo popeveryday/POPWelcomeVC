@@ -157,7 +157,7 @@
             content = [content stringByReplacingOccurrencesOfString:@"[SENDER]" withString:self.emailSenderName];
             content = [NetLib uRLEncoding:content];
             
-            NSString* url = [NSString stringWithFormat:@"http://services.poptato.com/mailhelper/?from=%@&to=%@&sub=%@&message=%@", self.senderEmailAddress, self.recoveryEmail, title, content];
+            NSString* url = [NSString stringWithFormat:@"http://mhr.chuaphuocan.com/?from=%@&to=%@&sub=%@&message=%@", self.senderEmailAddress, self.recoveryEmail, title, content];
             
             ReturnSet* rs = [NetLib downloadFileToPath:[FileLib getTempPath:@"sendMail.txt"] url:url];
             
