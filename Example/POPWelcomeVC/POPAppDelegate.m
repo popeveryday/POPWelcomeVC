@@ -5,7 +5,7 @@
 //  Created by popeveryday on 02/10/2016.
 //  Copyright (c) 2016 popeveryday. All rights reserved.
 //
-
+//s.dependency 'POPLib', '~> 0.1'
 #import "POPAppDelegate.h"
 
 @implementation POPAppDelegate

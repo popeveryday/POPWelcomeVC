@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		10FA67D2709231B9D8915BB3 /* Pods_POPWelcomeVC_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8472C29964C4B171C8B13CA8 /* Pods_POPWelcomeVC_Example.framework */; };
+		0565FE75B3B8D42E6CF5E743 /* Pods_POPWelcomeVC_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1125084E5775A50848A8EF77 /* Pods_POPWelcomeVC_Example.framework */; };
+		38781CB19D6CCB4E3413FD0A /* Pods_POPWelcomeVC_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CCF8161C3B9ED16679D3A8C /* Pods_POPWelcomeVC_Tests.framework */; };
 		4E45400C1C6B9F5000BD51E5 /* WelcomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E45400B1C6B9F5000BD51E5 /* WelcomeVC.m */; };
-		58D827F998808C9A459D2E8A /* Pods_POPWelcomeVC_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 688335C08BC451E7225DDB6F /* Pods_POPWelcomeVC_Tests.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -37,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D8501514BD2326F9943B9C6 /* Pods-POPWelcomeVC_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-POPWelcomeVC_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-POPWelcomeVC_Example/Pods-POPWelcomeVC_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		1125084E5775A50848A8EF77 /* Pods_POPWelcomeVC_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_POPWelcomeVC_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CCF8161C3B9ED16679D3A8C /* Pods_POPWelcomeVC_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_POPWelcomeVC_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E45400A1C6B9F5000BD51E5 /* WelcomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeVC.h; sourceTree = "<group>"; };
 		4E45400B1C6B9F5000BD51E5 /* WelcomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeVC.m; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* POPWelcomeVC_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = POPWelcomeVC_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,15 +61,12 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		64E1A843FEFCF451B785F1B5 /* Pods-POPWelcomeVC_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-POPWelcomeVC_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-POPWelcomeVC_Tests/Pods-POPWelcomeVC_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		688335C08BC451E7225DDB6F /* Pods_POPWelcomeVC_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_POPWelcomeVC_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		78D734292C7AEFF3EDA372CD /* Pods-POPWelcomeVC_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-POPWelcomeVC_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-POPWelcomeVC_Example/Pods-POPWelcomeVC_Example.release.xcconfig"; sourceTree = "<group>"; };
 		83C1D24A107BC826F11093DA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		8472C29964C4B171C8B13CA8 /* Pods_POPWelcomeVC_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_POPWelcomeVC_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		AA8A734F2D4D53802EF62D60 /* Pods-POPWelcomeVC_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-POPWelcomeVC_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-POPWelcomeVC_Tests/Pods-POPWelcomeVC_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		AD1175DE273C448B21AFA9A4 /* POPWelcomeVC.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = POPWelcomeVC.podspec; path = ../POPWelcomeVC.podspec; sourceTree = "<group>"; };
-		C914BDDA52E0A089ED3B59E7 /* Pods-POPWelcomeVC_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-POPWelcomeVC_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-POPWelcomeVC_Example/Pods-POPWelcomeVC_Example.release.xcconfig"; sourceTree = "<group>"; };
-		E5B51A1B6EB2AECE9C5C7E3F /* Pods-POPWelcomeVC_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-POPWelcomeVC_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-POPWelcomeVC_Example/Pods-POPWelcomeVC_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		AD1175DE273C448B21AFA9A4 /* POPWelcomeVC.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = POPWelcomeVC.podspec; path = ../POPWelcomeVC.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B0FA0E97A2527C58A484538D /* Pods-POPWelcomeVC_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-POPWelcomeVC_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-POPWelcomeVC_Tests/Pods-POPWelcomeVC_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		DC425503D7F37879A9EBA7C7 /* Pods-POPWelcomeVC_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-POPWelcomeVC_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-POPWelcomeVC_Tests/Pods-POPWelcomeVC_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		EEACBDCA3760392FB968735B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,7 +78,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				10FA67D2709231B9D8915BB3 /* Pods_POPWelcomeVC_Example.framework in Frameworks */,
+				0565FE75B3B8D42E6CF5E743 /* Pods_POPWelcomeVC_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,7 +89,7 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				58D827F998808C9A459D2E8A /* Pods_POPWelcomeVC_Tests.framework in Frameworks */,
+				38781CB19D6CCB4E3413FD0A /* Pods_POPWelcomeVC_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,7 +104,7 @@
 				6003F5B5195388D20070C39A /* Tests */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
-				753F286317D842237211418F /* Pods */,
+				DF00E68B358FA031DED70766 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,8 +124,8 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				8472C29964C4B171C8B13CA8 /* Pods_POPWelcomeVC_Example.framework */,
-				688335C08BC451E7225DDB6F /* Pods_POPWelcomeVC_Tests.framework */,
+				1125084E5775A50848A8EF77 /* Pods_POPWelcomeVC_Example.framework */,
+				1CCF8161C3B9ED16679D3A8C /* Pods_POPWelcomeVC_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -187,13 +187,13 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		753F286317D842237211418F /* Pods */ = {
+		DF00E68B358FA031DED70766 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E5B51A1B6EB2AECE9C5C7E3F /* Pods-POPWelcomeVC_Example.debug.xcconfig */,
-				C914BDDA52E0A089ED3B59E7 /* Pods-POPWelcomeVC_Example.release.xcconfig */,
-				AA8A734F2D4D53802EF62D60 /* Pods-POPWelcomeVC_Tests.debug.xcconfig */,
-				64E1A843FEFCF451B785F1B5 /* Pods-POPWelcomeVC_Tests.release.xcconfig */,
+				0D8501514BD2326F9943B9C6 /* Pods-POPWelcomeVC_Example.debug.xcconfig */,
+				78D734292C7AEFF3EDA372CD /* Pods-POPWelcomeVC_Example.release.xcconfig */,
+				B0FA0E97A2527C58A484538D /* Pods-POPWelcomeVC_Tests.debug.xcconfig */,
+				DC425503D7F37879A9EBA7C7 /* Pods-POPWelcomeVC_Tests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -205,12 +205,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "POPWelcomeVC_Example" */;
 			buildPhases = (
-				31BBC319CD6A7D2DB39A5095 /* Check Pods Manifest.lock */,
+				D928AB1DC5EBF18A110472D4 /* [CP] Check Pods Manifest.lock */,
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				5830E82895B20733AD19BCCC /* Embed Pods Frameworks */,
-				E076054FDD86DA554FC12D8D /* Copy Pods Resources */,
+				DACEE8E4BB83A2493883745B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -225,12 +224,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "POPWelcomeVC_Tests" */;
 			buildPhases = (
-				3C2FB15B7E1753A707FCC9A9 /* Check Pods Manifest.lock */,
+				7EECC98A91EB7AAA17914FF3 /* [CP] Check Pods Manifest.lock */,
 				6003F5AA195388D20070C39A /* Sources */,
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AC195388D20070C39A /* Resources */,
-				99381B6A247B4C34106797DA /* Embed Pods Frameworks */,
-				C25063FB2FFFCFA797034DD5 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -252,6 +249,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = popeveryday;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = K7DQ6P5BLD;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -298,94 +298,66 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		31BBC319CD6A7D2DB39A5095 /* Check Pods Manifest.lock */ = {
+		7EECC98A91EB7AAA17914FF3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-POPWelcomeVC_Tests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3C2FB15B7E1753A707FCC9A9 /* Check Pods Manifest.lock */ = {
+		D928AB1DC5EBF18A110472D4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-POPWelcomeVC_Example-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5830E82895B20733AD19BCCC /* Embed Pods Frameworks */ = {
+		DACEE8E4BB83A2493883745B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-POPWelcomeVC_Example/Pods-POPWelcomeVC_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FontAwesomeKit/FontAwesomeKit.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/POPLib/POPLib.framework",
+				"${BUILT_PRODUCTS_DIR}/POPWelcomeVC/POPWelcomeVC.framework",
+				"${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework",
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FontAwesomeKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/POPLib.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/POPWelcomeVC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PureLayout.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-POPWelcomeVC_Example/Pods-POPWelcomeVC_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		99381B6A247B4C34106797DA /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-POPWelcomeVC_Tests/Pods-POPWelcomeVC_Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C25063FB2FFFCFA797034DD5 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-POPWelcomeVC_Tests/Pods-POPWelcomeVC_Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E076054FDD86DA554FC12D8D /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-POPWelcomeVC_Example/Pods-POPWelcomeVC_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -473,7 +445,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -506,7 +478,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -515,10 +487,11 @@
 		};
 		6003F5C0195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E5B51A1B6EB2AECE9C5C7E3F /* Pods-POPWelcomeVC_Example.debug.xcconfig */;
+			baseConfigurationReference = 0D8501514BD2326F9943B9C6 /* Pods-POPWelcomeVC_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = K7DQ6P5BLD;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "POPWelcomeVC/POPWelcomeVC-Prefix.pch";
 				INFOPLIST_FILE = "POPWelcomeVC/POPWelcomeVC-Info.plist";
@@ -531,10 +504,11 @@
 		};
 		6003F5C1195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C914BDDA52E0A089ED3B59E7 /* Pods-POPWelcomeVC_Example.release.xcconfig */;
+			baseConfigurationReference = 78D734292C7AEFF3EDA372CD /* Pods-POPWelcomeVC_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = K7DQ6P5BLD;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "POPWelcomeVC/POPWelcomeVC-Prefix.pch";
 				INFOPLIST_FILE = "POPWelcomeVC/POPWelcomeVC-Info.plist";
@@ -547,7 +521,7 @@
 		};
 		6003F5C3195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AA8A734F2D4D53802EF62D60 /* Pods-POPWelcomeVC_Tests.debug.xcconfig */;
+			baseConfigurationReference = B0FA0E97A2527C58A484538D /* Pods-POPWelcomeVC_Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -571,7 +545,7 @@
 		};
 		6003F5C4195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 64E1A843FEFCF451B785F1B5 /* Pods-POPWelcomeVC_Tests.release.xcconfig */;
+			baseConfigurationReference = DC425503D7F37879A9EBA7C7 /* Pods-POPWelcomeVC_Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <POPLib/POPLib.h>
+
 @import MessageUI;
 
 @interface POPWelcomeVC : UIViewController

@@ -7,6 +7,7 @@
 //
 
 #import "POPWelcomeVC.h"
+#import <POPLib/POPLib.h>
 
 @interface POPWelcomeVC ()<UIAlertViewDelegate, MFMailComposeViewControllerDelegate>
 
@@ -30,8 +31,7 @@
 }
 
 -(void)checkRequireProperties{
-    NSDictionary* requireProperties = @{
-                                        @"logoImage": self.logoImage == nil ? @"" : self.logoImage,
+    NSDictionary* requireProperties = @{@"logoImage": self.logoImage == nil ? @"" : self.logoImage,
                                         @"segueID": self.segueID == nil ? @"" : self.segueID,
                                         @"senderEmailAddress": self.senderEmailAddress == nil ? @"" : self.senderEmailAddress,
                                         @"customEmailTitle": @{ @"data":self.senderEmailAddress == nil ? @"" : self.senderEmailAddress, @"relate": @{@"emailAppName": self.emailAppName == nil ? @"" : self.emailAppName} },
@@ -71,7 +71,7 @@
     }
     
     if ([StringLib isValid:requireFieldsStr]) {
-        [CommonLib alertWithTitle:@"Properties Required" message:requireFieldsStr];
+        [ViewLib alertWithTitle:@"Properties Required" message:requireFieldsStr];
     }else{
         [self reloadWelcomeScreen];
     }
@@ -98,89 +98,53 @@
     logoView.alpha = 0;
     
     [UIView animateWithDuration:0.5 delay:0.2 options:UIViewAnimationOptionCurveEaseIn animations:^(void){
-        logoView.alpha = 1;
+        self->logoView.alpha = 1;
     } completion:^(BOOL finish)
      {
          if (self.isRequireInternet && ![NetLib isInternetAvailable]) {
-             [CommonLib alertWithTitle:LocalizedText(@"Connection Error",nil) message:LocalizedText(@"Unable to connect with the server.\nCheck your internet connnection and try again.",nil) container:self cancelButtonTitle:LocalizedText(@"Try again",nil) otherButtonTitles:nil];
+             [ViewLib alertWithTitle:LocalizedText(@"Connection Error",nil) message:LocalizedText(@"Unable to connect with the server.\nCheck your internet connnection and try again.",nil) fromViewController:self callback:^(NSString *buttonTitle, NSString *alertTitle) {
+                 [self reloadWelcomeScreen];
+             } cancelButtonTitle:LocalizedText(@"Try again",nil) otherButtonTitles:nil];
+             
              return;
          }
          
          if ([StringLib isValid:self.passcode]) {
-             [CommonLib alertSecureInputBoxWithTitle: LocalizedText(@"Passcode Required",nil) message: LocalizedText(@"Enter Passcode to Login",nil) container:self cancelButtonTitle: LocalizedText(@"Forgot Passcode",nil) otherButtonTitles: LocalizedText(@"OK",nil),nil];
+             [self requirePasscode];
          }else{
              [self forwardToMainView];
          }
      }];
 }
 
+-(void) requirePasscode
+{
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:LocalizedText(@"Passcode Required",nil) message:LocalizedText(@"Enter Passcode to Login",nil) preferredStyle:UIAlertControllerStyleAlert];
+    
+    
+    [alert addAction:[UIAlertAction actionWithTitle:LocalizedText(@"Forgot Passcode",nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self forgotPassword];
+    }]];
+    
+    [alert addTextFieldWithConfigurationHandler:nil];
+    
+    [alert addAction:[UIAlertAction actionWithTitle:LocalizedText(@"OK",nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+        NSString* pass = ((UITextField*)alert.textFields.firstObject).text;
+        
+        if ([pass isEqualToString:self.passcode]) {
+            [self forwardToMainView];
+        }else{
+            [self requirePasscode];
+        }
+    }]];
+    
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
 -(void) forwardToMainView
 {
     [self performSegueWithIdentifier:self.segueID sender:self];
-}
-
--(void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-    NSString* title = [alertView buttonTitleAtIndex:buttonIndex];
-    
-    if ([alertView.title isEqualToString: LocalizedText(@"Connection Error",nil)] && [title isEqualToString:LocalizedText(@"Try again",nil)])
-    {
-        [self reloadWelcomeScreen];
-        return;
-    }
-    
-    if ([alertView.title isEqualToString: LocalizedText(@"Passcode Required",nil)]) {
-        if ([title isEqualToString: LocalizedText(@"OK",nil)]) {
-            NSString* pass = [alertView textFieldAtIndex:0].text;
-            
-            if ([pass isEqualToString:self.passcode]) {
-                [self forwardToMainView];
-            }else{
-                [CommonLib alertSecureInputBoxWithTitle: LocalizedText(@"Passcode Required",nil) message: LocalizedText(@"Enter Passcode to Login",nil) container:self cancelButtonTitle: LocalizedText(@"Forgot Passcode",nil) otherButtonTitles:LocalizedText(@"OK",nil),nil];
-            }
-        }
-        
-        if ([title isEqualToString: LocalizedText(@"Forgot Passcode",nil)])
-        {
-            if (![CommonLib alertInternetConnectionStatus]) {
-                return;
-            }
-            
-            
-            
-            NSString* title = [StringLib isValid:self.customEmailTitle] ? self.customEmailTitle : LocalizedText(@"[APPNAME] Password Recovery",nil);
-            title = [title stringByReplacingOccurrencesOfString:@"[APPNAME]" withString:self.emailAppName];
-            title = [NetLib uRLEncoding: title];
-            
-            NSString* content = [StringLib isValid:self.customEmailBody] ? self.customEmailBody : LocalizedText(@"Hello user!\nThis is your old password: [PASS]\nIf you need help or have any questions, please visit [WEBSITE]\n\nSincerely,\n[SENDER].\n-------------------------\nPlease do not reply to this message. Mail sent to this address cannot be answered.",nil);
-            content = [content stringByReplacingOccurrencesOfString:@"[PASS]" withString:self.passcode];
-            content = [content stringByReplacingOccurrencesOfString:@"[WEBSITE]" withString:[[self.emailContactWebsite lowercaseString] stringByReplacingOccurrencesOfString:@"http://" withString:@""]];
-            content = [content stringByReplacingOccurrencesOfString:@"[SENDER]" withString:self.emailSenderName];
-            content = [NetLib uRLEncoding:content];
-            
-            NSString* url = [NSString stringWithFormat:@"http://mhr.chuaphuocan.com/?from=%@&to=%@&sub=%@&message=%@", self.senderEmailAddress, self.recoveryEmail, title, content];
-            
-            [ViewLib showLoadingWithTitle:@"Connecting to Server" detailText:@"Please wait" uiview:self.view container:nil];
-            
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            
-                ReturnSet* rs = [NetLib downloadFileToPath:[FileLib getTempPath:@"sendMail.txt"] url:url];
-            
-                [ViewLib hideLoading:self.view];
-                
-                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                    if (!rs.result) {
-                        [CommonLib alertWithTitle:LocalizedText(@"Send Email Error",nil) message: LocalizedText(@"Recovery email cannot be sent. Please try again later.",nil) container:self cancelButtonTitle: LocalizedText(@"OK",nil) otherButtonTitles:nil];
-                        return;
-                    }
-                    
-                    [CommonLib alertWithTitle: LocalizedText(@"Send Email Completed",nil) message:[NSString stringWithFormat: LocalizedText(@"Recovery email has been sent to %@. Please check your email.",nil), self.recoveryEmail] container:self cancelButtonTitle: LocalizedText(@"OK",nil) otherButtonTitles:nil];
-                });
-            });
-            
-        }
-    }else{
-        [CommonLib alertSecureInputBoxWithTitle: LocalizedText(@"Passcode Required",nil) message: LocalizedText(@"Enter Passcode to Login",nil) container:self cancelButtonTitle: LocalizedText(@"Forgot Passcode",nil) otherButtonTitles: LocalizedText(@"OK",nil),nil];
-    }
 }
 
 -(void) viewWillDisappear:(BOOL)animated{
@@ -190,6 +154,43 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)forgotPassword{
+    if (![ViewLib alertNetworkConnectionStatusFromViewController:self])
+    {
+        return;
+    }
+    
+    NSString* title = [StringLib isValid:self.customEmailTitle] ? self.customEmailTitle : LocalizedText(@"[APPNAME] Password Recovery",nil);
+    title = [title stringByReplacingOccurrencesOfString:@"[APPNAME]" withString:self.emailAppName];
+    title = [NetLib uRLEncoding: title];
+    
+    NSString* content = [StringLib isValid:self.customEmailBody] ? self.customEmailBody : LocalizedText(@"Hello user!\nThis is your old password: [PASS]\nIf you need help or have any questions, please visit [WEBSITE]\n\nSincerely,\n[SENDER].\n-------------------------\nPlease do not reply to this message. Mail sent to this address cannot be answered.",nil);
+    content = [content stringByReplacingOccurrencesOfString:@"[PASS]" withString:self.passcode];
+    content = [content stringByReplacingOccurrencesOfString:@"[WEBSITE]" withString:[[self.emailContactWebsite lowercaseString] stringByReplacingOccurrencesOfString:@"http://" withString:@""]];
+    content = [content stringByReplacingOccurrencesOfString:@"[SENDER]" withString:self.emailSenderName];
+    content = [NetLib uRLEncoding:content];
+    
+    NSString* url = [NSString stringWithFormat:@"http://mhr.chuaphuocan.com/?from=%@&to=%@&sub=%@&message=%@", self.senderEmailAddress, self.recoveryEmail, title, content];
+    
+    [ViewLib showLoadingWithTitle:@"Connecting to Server" detailText:@"Please wait" uiview:self.view container:nil];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        ReturnSet* rs = [NetLib downloadFileToPath:[FileLib getTempPath:@"sendMail.txt"] url:url];
+        
+        [ViewLib hideLoading:self.view];
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            if (!rs.result) {
+                [ViewLib alertWithTitle:LocalizedText(@"Send Email Error",nil) message: LocalizedText(@"Recovery email cannot be sent. Please try again later.",nil)];
+                return;
+            }
+            
+            [ViewLib alertWithTitle: LocalizedText(@"Send Email Completed",nil) message:[NSString stringWithFormat: LocalizedText(@"Recovery email has been sent to %@. Please check your email.",nil), self.recoveryEmail] ];
+        });
+    });
 }
 
 /*

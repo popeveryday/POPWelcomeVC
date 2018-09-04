@@ -1,12 +1,13 @@
 source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
-target 'POPWelcomeVC_Example', :exclusive => true do
-  pod 'POPWelcomeVC', :path => '../'
-end
-
-target 'POPWelcomeVC_Tests', :exclusive => true do
+target 'POPWelcomeVC_Example' do
   pod 'POPWelcomeVC', :path => '../'
 
-  
+  target 'POPWelcomeVC_Tests' do
+    inherit! :search_paths
+  end
+
 end
+
+
