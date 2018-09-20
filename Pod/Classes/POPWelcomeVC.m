@@ -8,6 +8,7 @@
 
 #import "POPWelcomeVC.h"
 #import <POPLib/POPLib.h>
+#import <LocalAuthentication/LocalAuthentication.h>
 
 @interface POPWelcomeVC ()<UIAlertViewDelegate, MFMailComposeViewControllerDelegate>
 
@@ -30,7 +31,8 @@
     [self checkRequireProperties];
 }
 
--(void)checkRequireProperties{
+-(void)checkRequireProperties
+{
     NSDictionary* requireProperties = @{@"logoImage": self.logoImage == nil ? @"" : self.logoImage,
                                         @"segueID": self.segueID == nil ? @"" : self.segueID,
                                         @"senderEmailAddress": self.senderEmailAddress == nil ? @"" : self.senderEmailAddress,
@@ -75,9 +77,14 @@
     }else{
         [self reloadWelcomeScreen];
     }
+    
+    
 }
 
--(void) reloadWelcomeScreen{
+
+
+-(void) reloadWelcomeScreen
+{
     [self.navigationController setNavigationBarHidden:YES];
     
     if (!logoView) {
@@ -109,12 +116,48 @@
              return;
          }
          
-         if ([StringLib isValid:self.passcode]) {
+         if ([StringLib isValid:self.passcode])
+         {
+             if(self.isUsingTouchId)
+             {
+                 [self showTouchIdInput];
+                 return;
+             }
+             
              [self requirePasscode];
-         }else{
+         }
+         else
+         {
              [self forwardToMainView];
          }
      }];
+}
+
+-(void) showTouchIdInput
+{
+    LAContext *myContext = [[LAContext alloc] init];
+    NSError *authError = nil;
+    NSString *myLocalizedReasonString = @"Touch ID to show Touch ID working in a custom app";
+    
+    if ([myContext canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&authError]) {
+        [myContext evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics
+                  localizedReason:myLocalizedReasonString
+                            reply:^(BOOL success, NSError *error) {
+                                if (success) {
+                                    dispatch_async(dispatch_get_main_queue(), ^{
+                                        [self forwardToMainView];
+                                    });
+                                } else {
+                                    dispatch_async(dispatch_get_main_queue(), ^{
+                                        [self requirePasscode];
+                                    });
+                                }
+                            }];
+    } else {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self requirePasscode];
+        });
+    }
 }
 
 -(void) requirePasscode

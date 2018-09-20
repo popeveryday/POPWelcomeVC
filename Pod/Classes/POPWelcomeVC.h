@@ -25,11 +25,10 @@
 @property (nonatomic) NSString* customEmailBody;
 @property (nonatomic) NSString* emailContactWebsite; //required
 @property (nonatomic) NSString* emailSenderName; //required
+@property (nonatomic) BOOL isUsingTouchId;
 
 
 @property (nonatomic) BOOL isRequireInternet;
-
--(void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex;
 
 -(void) reloadWelcomeScreen;
 -(void) forwardToMainView;
