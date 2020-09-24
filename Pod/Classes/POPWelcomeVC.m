@@ -124,7 +124,7 @@
                  return;
              }
              
-             [self requirePasscode];
+             [self requirePasscode:NO];
          }
          else
          {
@@ -137,9 +137,43 @@
 {
     LAContext *myContext = [[LAContext alloc] init];
     NSError *authError = nil;
-    NSString *myLocalizedReasonString = @"Touch ID to show Touch ID working in a custom app";
+    NSString *myLocalizedReasonString = LocalizedText(@"Use Touch ID to unlock iUSB", nil);
     
-    if ([myContext canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&authError]) {
+    if ([myContext canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&authError])
+    {
+        
+        if (@available(iOS 9.0, *)) {
+            if(self.touchDataState){
+                NSData* domainState = myContext.evaluatedPolicyDomainState;
+                if(![domainState isEqual:self.touchDataState])
+                {
+                    if(self.touchDataStateChangedBlock)
+                    {
+                        self.touchDataStateChangedBlock(YES);
+                    }
+                    
+                    UIAlertController* alert = [UIAlertController alertControllerWithTitle:LocalizedText(@"Message",nil) message: LocalizedText(@"TouchID login function has been disabled because the device's fingerprint information has been changed. Please login with a password to continue.", nil) preferredStyle:UIAlertControllerStyleAlert];
+                    [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                        
+                        dispatch_async(dispatch_get_main_queue(), ^{
+                            [self requirePasscode:YES];
+                        });
+                        
+                    }]];
+                    
+                    [self presentViewController:alert animated:YES completion:nil];
+                    
+                    return;
+                }
+            }
+        }
+        
+        myContext.localizedFallbackTitle = LocalizedText(@"Enter Passcode", nil);
+        
+        if (@available(iOS 10.0, *)) {
+            myContext.localizedCancelTitle = LocalizedText(@"Cancel", nil);
+        }
+        
         [myContext evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics
                   localizedReason:myLocalizedReasonString
                             reply:^(BOOL success, NSError *error) {
@@ -149,37 +183,58 @@
                                     });
                                 } else {
                                     dispatch_async(dispatch_get_main_queue(), ^{
-                                        [self requirePasscode];
+                                        [self requirePasscode:NO];
                                     });
                                 }
                             }];
     } else {
         dispatch_async(dispatch_get_main_queue(), ^{
-            [self requirePasscode];
+            [self requirePasscode:NO];
         });
     }
 }
 
--(void) requirePasscode
+-(void) requirePasscode:(BOOL)isTouchIDHasBeenChanged
 {
-    UIAlertController* alert = [UIAlertController alertControllerWithTitle:LocalizedText(@"Passcode Required",nil) message:LocalizedText(@"Enter Passcode to Login",nil) preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:LocalizedText(@"Passcode Required",nil) message:LocalizedText(@"Enter passcode to unlock iUSB",nil) preferredStyle:UIAlertControllerStyleAlert];
     
     
-    [alert addAction:[UIAlertAction actionWithTitle:LocalizedText(@"Forgot Passcode",nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [self forgotPassword];
-    }]];
     
-    [alert addTextFieldWithConfigurationHandler:nil];
+    
+    [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+        [textField setSecureTextEntry:YES];
+    }];
     
     [alert addAction:[UIAlertAction actionWithTitle:LocalizedText(@"OK",nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         
         NSString* pass = ((UITextField*)alert.textFields.firstObject).text;
         
-        if ([pass isEqualToString:self.passcode]) {
+        if ([pass isEqualToString:self.passcode])
+        {
+            if(isTouchIDHasBeenChanged && self.touchDataStateChangedBlock)
+            {
+                self.touchDataStateChangedBlock(NO);
+            }
+                
             [self forwardToMainView];
-        }else{
-            [self requirePasscode];
         }
+        else
+        {
+            [self requirePasscode: isTouchIDHasBeenChanged];
+        }
+    }]];
+    
+    if(self.isUsingTouchId)
+    {
+        [alert addAction:[UIAlertAction actionWithTitle:LocalizedText(@"Unlock with Touch ID",nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            [self showTouchIdInput];
+        }]];
+    }
+    
+    [alert addAction:[UIAlertAction actionWithTitle:LocalizedText(@"Forgot passcode",nil) style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+        
+        [self forgotPasswordAlert];
+        
     }]];
     
     [self presentViewController:alert animated:YES completion:nil];
@@ -199,7 +254,22 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)forgotPassword{
+-(void)forgotPasswordAlert
+{
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:LocalizedText(@"Forgot passcode",nil) message:LocalizedText(@"Are you sure you want to send passcode to your recovery email?",nil) preferredStyle:UIAlertControllerStyleAlert];
+    [alert addAction:[UIAlertAction actionWithTitle:LocalizedText(@"Cancel",nil) style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        [self requirePasscode:NO];
+    }]];
+    
+    [alert addAction:[UIAlertAction actionWithTitle:LocalizedText(@"OK",nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self forgotPassword];
+    }]];
+    
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+-(void)forgotPassword
+{
     if (![ViewLib alertNetworkConnectionStatusFromViewController:self])
     {
         return;
@@ -215,9 +285,9 @@
     content = [content stringByReplacingOccurrencesOfString:@"[SENDER]" withString:self.emailSenderName];
     content = [NetLib uRLEncoding:content];
     
-    NSString* url = [NSString stringWithFormat:@"http://mhr.chuaphuocan.com/?from=%@&to=%@&sub=%@&message=%@", self.senderEmailAddress, self.recoveryEmail, title, content];
+    NSString* url = [NSString stringWithFormat:@"http://mhr.poptato.com/?from=%@&to=%@&sub=%@&message=%@", self.senderEmailAddress, self.recoveryEmail, title, content];
     
-    [ViewLib showLoadingWithTitle:@"Connecting to Server" detailText:@"Please wait" uiview:self.view container:nil];
+    [ViewLib showLoadingWithTitle:LocalizedText(@"Connecting to server",nil) detailText: LocalizedText(@"Please wait",nil) uiview:self.view container:nil];
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         
@@ -227,14 +297,77 @@
         
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             if (!rs.result) {
-                [ViewLib alertWithTitle:LocalizedText(@"Send Email Error",nil) message: LocalizedText(@"Recovery email cannot be sent. Please try again later.",nil)];
+                [self alertWithTitle:LocalizedText(@"Send email error",nil) message: LocalizedText(@"Recovery email cannot be sent. Please try again later.",nil) completeBlock:^{ [self requirePasscode:NO]; }];
                 return;
             }
             
-            [ViewLib alertWithTitle: LocalizedText(@"Send Email Completed",nil) message:[NSString stringWithFormat: LocalizedText(@"Recovery email has been sent to %@. Please check your email.",nil), self.recoveryEmail] ];
+            [self alertWithTitle: LocalizedText(@"Send email completed",nil) message:[NSString stringWithFormat: LocalizedText(@"Your passcode has been sent to %@. Please check your email.",nil), self.recoveryEmail] completeBlock:^{ [self requirePasscode:NO]; }];
+            
         });
     });
 }
+
+
++(void)checkEmailExist:(NSString*)email appName:(NSString*)appName sender:(NSString*)sender senderEmail:(NSString*)senderEmail fromViewController:(UIViewController*)vc completeBlock:(void (^)(BOOL result)) completeBlock
+{
+    if (![ViewLib alertNetworkConnectionStatusFromViewController:vc])
+    {
+        if(completeBlock) completeBlock(NO);
+        return;
+    }
+    
+    NSString* pincode = @"";
+    for (int i = 0; i < 4; i++) {
+        pincode = [pincode stringByAppendingFormat:@"%@", @([CommonLib randomFromInt:0 toInt:9])];
+    }
+    
+    
+    NSString* title = LocalizedText(@"[APPNAME] Email Pincode",nil);
+    title = [title stringByReplacingOccurrencesOfString:@"[APPNAME]" withString:appName];
+    title = [NetLib uRLEncoding: title];
+    
+    NSString* content = LocalizedText(@"Hello, this is your pin code: [PASS]\nPlease enter to confirm box to complete setup app's passcode.\n\nSincerely,\n[SENDER].\n-------------------------\nPlease do not reply to this message. Mail sent to this address cannot be answered.",nil);
+    content = [content stringByReplacingOccurrencesOfString:@"[PASS]" withString:pincode];
+    content = [content stringByReplacingOccurrencesOfString:@"[SENDER]" withString:sender];
+    content = [NetLib uRLEncoding:content];
+    
+    NSString* url = [NSString stringWithFormat:@"http://mhr.poptato.com/?from=%@&to=%@&sub=%@&message=%@", senderEmail, email, title, content];
+    
+    [ViewLib showLoadingWithTitle:LocalizedText(@"Connecting to server",nil) detailText: LocalizedText(@"Please wait",nil) uiview:vc.view container:nil];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        ReturnSet* rs = [NetLib downloadFileToPath:[FileLib getTempPath:@"sendMail.txt"] url:url];
+        
+        [ViewLib hideLoading:vc.view];
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            if (!rs.result) {
+//                [ViewLib alertWithTitle:LocalizedText(@"Send email error",nil) message: LocalizedText(@"Recovery email cannot be sent. Please try again later.",nil)];
+                
+                if(completeBlock) completeBlock(NO);
+            }else{
+//                [ViewLib alertWithTitle: LocalizedText(@"Send email completed",nil) message:[NSString stringWithFormat: LocalizedText(@"Your PIN code has been sent to %@. Please check your email.",nil), email]];
+                if(completeBlock) completeBlock(YES);
+            }
+            
+        });
+    });
+}
+
+-(void) alertWithTitle:(NSString*)title message:(NSString*)message completeBlock:(void (^)(void)) completeBlock
+{
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    
+    [alert addAction:[UIAlertAction actionWithTitle:LocalizedText(@"OK",nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        if(completeBlock) completeBlock();
+    }]];
+    
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+
+
 
 /*
  #pragma mark - Navigation
